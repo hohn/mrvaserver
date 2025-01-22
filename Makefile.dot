@@ -2,10 +2,21 @@
 digraph {
     node [colorscheme=set14]
     
+    // Regular targets
     "all" [shape=parallelogram style=solid color=1 penwidth=2]
     "msla" [shape=parallelogram style=solid color=2 penwidth=2]
     "mrvaserver" [shape=rectangle style=solid color=3 penwidth=2]
     "clean" [shape=parallelogram style=solid color=4 penwidth=2]
 
+    // Phony nodes
+    "all_phony" [shape=ellipse style=solid color=black]
+    "msla_phony" [shape=ellipse style=solid color=black]
+    "clean_phony" [shape=ellipse style=solid color=black]
+
+    // Dependencies
     "all" -> "msla"
+    "all" -> "all_phony"
+    "msla" -> "msla_phony"
+    "clean" -> "clean_phony"
 }
+

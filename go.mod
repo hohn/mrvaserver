@@ -2,18 +2,16 @@ module mrvaserver
 
 go 1.22.0
 
-require (
-	github.com/elastic/go-sysinfo v1.14.0
-	github.com/google/uuid v1.6.0
-	github.com/gorilla/mux v1.8.1
-	github.com/hohn/mrvacommander v0.2.1
-)
+require github.com/hohn/mrvacommander v0.2.1
 
 require (
 	github.com/BurntSushi/toml v1.4.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
+	github.com/elastic/go-sysinfo v1.14.0 // indirect
 	github.com/elastic/go-windows v1.0.1 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
+	github.com/google/uuid v1.6.0 // indirect
+	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/klauspost/compress v1.17.6 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
 	github.com/minio/md5-simd v1.1.2 // indirect
@@ -31,3 +29,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	howett.net/plist v1.0.1 // indirect
 )
+
+replace github.com/hohn/mrvacommander => /Users/hohn/work-gh/mrva/mrvacommander
