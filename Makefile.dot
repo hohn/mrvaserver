@@ -1,0 +1,9 @@
+// dot -Tpdf Makefile.dot > Makefile.pdf && open Makefile.pdf
+digraph {
+    "all" [shape=parallelogram style=solid color="#e41a1c" penwidth=2]  // Red
+    "msla" [shape=parallelogram style=solid color="#377eb8" penwidth=2]  // Blue
+    "mrvaserver" [shape=rectangle style=solid color="#4daf4a" penwidth=2]  // Green
+    "clean" [shape=parallelogram style=solid color="#984ea3" penwidth=2]  // Purple
+
+    "all" -> "msla"
+}
