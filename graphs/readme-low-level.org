@@ -3,6 +3,8 @@
 * step
   #+BEGIN_SRC sh 
     # Create db
+    cd ~/work-gh/mrva/mrvaserver/graphs/
+
     DB=go-codeql.db
     SRCDIR=~/work-gh/mrva/mrvaserver
     codeql database create --language=go            \
@@ -10,9 +12,30 @@
            -j 8 -v                                  \
            $DB                                      \
            --command="go build"
+  #+END_SRC
 
+* step
+  #+BEGIN_SRC sh 
+    # Produce ast in dot format
+    cd ~/work-gh/mrva/mrvaserver/graphs
+
+    codeql database analyze                             \
+           --format=dot --output=ast.dot                \
+           -j8 -v --ram=16000                           \
+           --rerun                                      \
+           --                                           \
+           go-codeql.db \
+           ast.ql                            
+
+    # Convert dot to pdf
+    dot -Tpdf < ast.dot/go/print-ast.dot > ast.dot/go/print-ast.pdf
+    dot -Tsvg < ast.dot/go/print-ast.dot > ast.dot/go/print-ast.svg
+
+    # View the graph
+    open ast.dot/go/print-ast.pdf
 
   #+END_SRC
+
 
 * CodeQL AST in dot and pdf
   The control flow graph is narrowed to the function of interest,
