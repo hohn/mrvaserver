@@ -1,0 +1,2034 @@
+[T 18:34:21 28749] CodeQL CLI version 2.21.0
+[T 18:34:21 28749] Initializing tracer.
+[T 18:34:21 28749] Initializing tags.
+[T 18:34:21 28749] ID set to 000000000000704D_0000000000000001 (parent root)
+[T 18:34:21 28749] Initializing tracer.
+[T 18:34:21 28749] Initializing tags.
+[T 18:34:21 28749] ID set to 000000000000704D_0000000000000002 (parent root)
+[T 18:34:21 28749] Warning: SEMMLE_EXEC and SEMMLE_EXECP not set. Falling back to path lookup on argv[0].
+[T 18:34:21 28749] ==== Candidate to intercept: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/tools/osx64/runner-osx (canonical: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/tools/osx64/runner-osx) ====
+[T 18:34:21 28749] Executing the following tracer actions:
+[T 18:34:21 28749] Tracer actions:
+[T 18:34:21 28749] pre_invocations(0)
+[T 18:34:21 28749] post_invocations(0)
+[T 18:34:21 28749] trace_languages(1): [go]
+[T 18:34:21 28781] Attempting to switch stdout/stderr to 3...
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/bin/go.semmle.0000704D.34EA5F18.slice.arm64: replacing existing signature
+[T 18:34:22 28749] Initializing tracer.
+[T 18:34:22 28749] Initializing tags.
+[T 18:34:22 28749] ID set to 000000000000704D_0000000000000003 (parent 000000000000704D_0000000000000002)
+[T 18:34:22 28749] ==== Candidate to intercept: /opt/homebrew/bin/go (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/bin/go) ====
+[T 18:34:22 28749] Lua: === Intercepted call to /opt/homebrew/cellar/go/1.23.0/libexec/bin/go ===
+[T 18:34:22 28749] Executing the following tracer actions:
+[T 18:34:22 28749] Tracer actions:
+[T 18:34:22 28749] pre_invocations(1)
+[T 18:34:22 28749] invocation: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor, args: [--mimic, /opt/homebrew/cellar/go/1.23.0/libexec/bin/go, build]
+[T 18:34:22 28749] post_invocations(0)
+[T 18:34:22 28749] trace_languages(1): [go]
+[T 18:34:22 28817] Attempting to switch stdout/stderr to 4...
+[T 18:34:22 28818] Attempting to switch stdout/stderr to 4...
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor.semmle.00007091.2C6B75C0.slice.arm64: replacing existing signature
+[T 18:34:23 28817] Initializing tracer.
+[T 18:34:23 28817] Initializing tags.
+[T 18:34:23 28817] ID set to 0000000000007091_0000000000000001 (parent 000000000000704D_0000000000000003)
+2025/05/05 11:34:23 Compiler: /opt/homebrew/cellar/go/1.23.0/libexec/bin/go
+2025/05/05 11:34:23 Intercepting build for build command
+2025/05/05 11:34:23 No packages explicitly provided, adding '.'
+2025/05/05 11:34:23 Build flags: ''; patterns: '.'
+2025/05/05 11:34:23 Running packages.Load.
+[T 18:34:23 28875] Initializing tracer.
+[T 18:34:23 28876] Initializing tracer.
+[T 18:34:23 28875] Initializing tags.
+[T 18:34:23 28876] Initializing tags.
+[T 18:34:23 28876] ID set to 00000000000070CC_0000000000000001 (parent 0000000000007091_0000000000000001)
+[T 18:34:23 28875] ID set to 00000000000070CB_0000000000000001 (parent 0000000000007091_0000000000000001)
+[T 18:34:23 28876] ==== Candidate to intercept: /opt/homebrew/bin/go (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/bin/go) ====
+[T 18:34:23 28875] ==== Candidate to intercept: /opt/homebrew/bin/go (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/bin/go) ====
+[T 18:34:23 28876] Lua: === Intercepted call to /opt/homebrew/cellar/go/1.23.0/libexec/bin/go ===
+[T 18:34:23 28876] Executing the following tracer actions:
+[T 18:34:23 28875] Lua: === Intercepted call to /opt/homebrew/cellar/go/1.23.0/libexec/bin/go ===
+[T 18:34:23 28876] Tracer actions:
+[T 18:34:23 28876] pre_invocations(1)
+[T 18:34:23 28875] Executing the following tracer actions:
+[T 18:34:23 28875] Tracer actions:
+[T 18:34:23 28876] invocation: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor, args: [--mimic, /opt/homebrew/cellar/go/1.23.0/libexec/bin/go, list, -f, {{context.GOARCH}} {{context.Compiler}}, --, unsafe]
+[T 18:34:23 28875] pre_invocations(1)
+[T 18:34:23 28876] post_invocations(0)
+[T 18:34:23 28876] trace_languages(1): [go]
+[T 18:34:23 28875] invocation: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor, args: [--mimic, /opt/homebrew/cellar/go/1.23.0/libexec/bin/go, list, -e, -f, {{context.ReleaseTags}}, --, unsafe]
+[T 18:34:23 28877] Attempting to switch stdout/stderr to 4...
+[T 18:34:23 28875] post_invocations(0)
+[T 18:34:23 28875] trace_languages(1): [go]
+[T 18:34:23 28878] Attempting to switch stdout/stderr to 4...
+[T 18:34:23 28877] Initializing tracer.
+[T 18:34:23 28877] Initializing tags.
+[T 18:34:23 28878] Initializing tracer.
+[T 18:34:23 28878] Initializing tags.
+[T 18:34:23 28877] ID set to 00000000000070CD_0000000000000001 (parent 00000000000070CC_0000000000000001)
+2025/05/05 11:34:23 Compiler: /opt/homebrew/cellar/go/1.23.0/libexec/bin/go
+2025/05/05 11:34:23 Non-build command '/opt/homebrew/cellar/go/1.23.0/libexec/bin/go list -f {{context.GOARCH}} {{context.Compiler}} -- unsafe'; skipping
+[T 18:34:23 28878] ID set to 00000000000070CE_0000000000000001 (parent 00000000000070CB_0000000000000001)
+2025/05/05 11:34:23 Compiler: /opt/homebrew/cellar/go/1.23.0/libexec/bin/go
+2025/05/05 11:34:23 Non-build command '/opt/homebrew/cellar/go/1.23.0/libexec/bin/go list -e -f {{context.ReleaseTags}} -- unsafe'; skipping
+[T 18:34:23 28875] Extractor /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor terminated with exit code 0.
+[T 18:34:23 28876] Extractor /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor terminated with exit code 0.
+[T 18:34:23 28879] Initializing tracer.
+[T 18:34:23 28879] Initializing tags.
+[T 18:34:23 28879] ID set to 00000000000070CF_0000000000000001 (parent 0000000000007091_0000000000000001)
+[T 18:34:23 28879] ==== Candidate to intercept: /opt/homebrew/bin/go (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/bin/go) ====
+[T 18:34:23 28879] Lua: === Intercepted call to /opt/homebrew/cellar/go/1.23.0/libexec/bin/go ===
+[T 18:34:23 28879] Executing the following tracer actions:
+[T 18:34:23 28879] Tracer actions:
+[T 18:34:23 28879] pre_invocations(1)
+[T 18:34:23 28879] invocation: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor, args: [--mimic, /opt/homebrew/cellar/go/1.23.0/libexec/bin/go, list, -e, -json=Name,ImportPath,Error,Dir,GoFiles,IgnoredGoFiles,IgnoredOtherFiles,CFiles,CgoFiles,CXXFiles,MFiles,HFiles,FFiles,SFiles,SwigFiles,SwigCXXFiles,SysoFiles,CompiledGoFiles,Export,DepOnly,Imports,ImportMap,Module, -compiled=true, -test=false, -export=false, -deps=true, -find=false, -pgo=off, --, .]
+[T 18:34:23 28879] post_invocations(0)
+[T 18:34:23 28879] trace_languages(1): [go]
+[T 18:34:23 28880] Attempting to switch stdout/stderr to 4...
+[T 18:34:23 28880] Initializing tracer.
+[T 18:34:23 28880] Initializing tags.
+[T 18:34:23 28880] ID set to 00000000000070D0_0000000000000001 (parent 00000000000070CF_0000000000000001)
+2025/05/05 11:34:23 Compiler: /opt/homebrew/cellar/go/1.23.0/libexec/bin/go
+2025/05/05 11:34:23 Non-build command '/opt/homebrew/cellar/go/1.23.0/libexec/bin/go list -e -json=Name,ImportPath,Error,Dir,GoFiles,IgnoredGoFiles,IgnoredOtherFiles,CFiles,CgoFiles,CXXFiles,MFiles,HFiles,FFiles,SFiles,SwigFiles,SwigCXXFiles,SysoFiles,CompiledGoFiles,Export,DepOnly,Imports,ImportMap,Module -compiled=true -test=false -export=false -deps=true -find=false -pgo=off -- .'; skipping
+[T 18:34:23 28879] Extractor /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor terminated with exit code 0.
+[T 18:34:23 28912] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28899] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28911] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28909] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28908] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28906] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28907] Attempting to switch stdout/stderr to 7...
+[T 18:34:23 28904] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28901] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28897] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28910] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28903] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28898] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28905] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28900] Attempting to switch stdout/stderr to 34...
+[T 18:34:23 28902] Attempting to switch stdout/stderr to 34...
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070E0.202DF210.slice.arm64: replacing existing signature/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070DB.202F70E0.slice.arm64: replacing existing signature/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070DA.202F2A90.slice.arm64: replacing existing signature
+
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D3.202DE270.slice.arm64: replacing existing signature
+
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070DD.202DC718.slice.arm64: replacing existing signature
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070DE.202E6B28.slice.arm64: replacing existing signature
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D9.202EAD90.slice.arm64: replacing existing signature/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D7.202DBF48.slice.arm64: replacing existing signature
+
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D5.202E6B28.slice.arm64: replacing existing signature
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D1.202E4800.slice.arm64: replacing existing signature/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D8.202DC718.slice.arm64: replacing existing signature/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070DC.202DCEE8.slice.arm64: replacing existing signature
+
+
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D4.202EA1D8.slice.arm64: replacing existing signature
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070DF.202DCEE8.slice.arm64: replacing existing signature
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D6.202FAF60.slice.arm64: replacing existing signature
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile.semmle.000070D2.202DE270.slice.arm64: replacing existing signature
+[T 18:34:25 28892] Initializing tracer.
+[T 18:34:25 28892] Initializing tags.
+[T 18:34:25 28892] ID set to 00000000000070DC_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28892] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28892] Executing the following tracer actions:
+[T 18:34:25 28892] Tracer actions:
+[T 18:34:25 28892] pre_invocations(0)
+[T 18:34:25 28892] post_invocations(0)
+[T 18:34:25 28892] trace_languages(1): [go]
+[T 18:34:25 28893] Initializing tracer.
+[T 18:34:25 28887] Initializing tracer.
+[T 18:34:25 28887] Initializing tags.
+[T 18:34:25 28887] ID set to 00000000000070D7_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28887] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28887] Executing the following tracer actions:
+[T 18:34:25 28887] Tracer actions:
+[T 18:34:25 28887] pre_invocations(0)
+[T 18:34:25 28887] post_invocations(0)
+[T 18:34:25 28887] trace_languages(1): [go]
+[T 18:34:25 28884] Initializing tracer.
+[T 18:34:25 28884] Initializing tags.
+[T 18:34:25 28884] ID set to 00000000000070D4_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28884] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28884] Executing the following tracer actions:
+[T 18:34:25 28884] Tracer actions:
+[T 18:34:25 28884] pre_invocations(0)
+[T 18:34:25 28884] post_invocations(0)
+[T 18:34:25 28884] trace_languages(1): [go]
+[T 18:34:25 28881] Initializing tracer.
+[T 18:34:25 28881] Initializing tags.
+[T 18:34:25 28881] ID set to 00000000000070D1_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28881] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28881] Executing the following tracer actions:
+[T 18:34:25 28881] Tracer actions:
+[T 18:34:25 28881] pre_invocations(0)
+[T 18:34:25 28881] post_invocations(0)
+[T 18:34:25 28881] trace_languages(1): [go]
+[T 18:34:25 28895] Initializing tracer.
+[T 18:34:25 28895] Initializing tags.
+[T 18:34:25 28895] ID set to 00000000000070DF_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28895] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28895] Executing the following tracer actions:
+[T 18:34:25 28895] Tracer actions:
+[T 18:34:25 28895] pre_invocations(0)
+[T 18:34:25 28895] post_invocations(0)
+[T 18:34:25 28895] trace_languages(1): [go]
+[T 18:34:25 28885] Initializing tracer.
+[T 18:34:25 28885] Initializing tags.
+[T 18:34:25 28885] ID set to 00000000000070D5_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28885] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28885] Executing the following tracer actions:
+[T 18:34:25 28885] Tracer actions:
+[T 18:34:25 28885] pre_invocations(0)
+[T 18:34:25 28885] post_invocations(0)
+[T 18:34:25 28885] trace_languages(1): [go]
+[T 18:34:25 29016] Attempting to switch stdout/stderr to 29...
+[T 18:34:25 28896] Initializing tracer.
+[T 18:34:25 28896] Initializing tags.
+[T 18:34:25 28896] ID set to 00000000000070E0_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28896] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm.semmle.00007157.2FEBC2E0.slice.arm64: replacing existing signature
+[T 18:34:25 28896] Executing the following tracer actions:
+[T 18:34:25 28896] Tracer actions:
+[T 18:34:25 28896] pre_invocations(0)
+[T 18:34:25 28896] post_invocations(0)
+[T 18:34:25 28896] trace_languages(1): [go]
+[T 18:34:25 28893] Initializing tags.
+[T 18:34:25 28893] ID set to 00000000000070DD_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28888] Initializing tracer.
+[T 18:34:25 28888] Initializing tags.
+[T 18:34:25 28888] ID set to 00000000000070D8_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28888] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28888] Executing the following tracer actions:
+[T 18:34:25 28888] Tracer actions:
+[T 18:34:25 28888] pre_invocations(0)
+[T 18:34:25 28888] post_invocations(0)
+[T 18:34:25 28888] trace_languages(1): [go]
+[T 18:34:25 28883] Initializing tracer.
+[T 18:34:25 28883] Initializing tags.
+[T 18:34:25 28883] ID set to 00000000000070D3_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28883] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28883] Executing the following tracer actions:
+[T 18:34:25 28883] Tracer actions:
+[T 18:34:25 28883] pre_invocations(0)
+[T 18:34:25 28883] post_invocations(0)
+[T 18:34:25 28883] trace_languages(1): [go]
+[T 18:34:25 28889] Initializing tracer.
+[T 18:34:25 28889] Initializing tags.
+[T 18:34:25 28889] ID set to 00000000000070D9_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28889] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28889] Executing the following tracer actions:
+[T 18:34:25 28889] Tracer actions:
+[T 18:34:25 28889] pre_invocations(0)
+[T 18:34:25 28889] post_invocations(0)
+[T 18:34:25 28889] trace_languages(1): [go]
+[T 18:34:25 28882] Initializing tracer.
+[T 18:34:25 28882] Initializing tags.
+[T 18:34:25 28882] ID set to 00000000000070D2_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28882] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28882] Executing the following tracer actions:
+[T 18:34:25 28882] Tracer actions:
+[T 18:34:25 28882] pre_invocations(0)
+[T 18:34:25 28882] post_invocations(0)
+[T 18:34:25 28882] trace_languages(1): [go]
+[T 18:34:25 28886] Initializing tracer.
+[T 18:34:25 28886] Initializing tags.
+[T 18:34:25 28886] ID set to 00000000000070D6_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28886] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 29010] Attempting to switch stdout/stderr to 5...
+[T 18:34:25 29012] Attempting to switch stdout/stderr to 26...
+[T 18:34:25 29009] Attempting to switch stdout/stderr to 5...
+[T 18:34:25 29014] Attempting to switch stdout/stderr to 31...
+[T 18:34:25 28891] Initializing tracer.
+[T 18:34:25 28891] Initializing tags.
+[T 18:34:25 28891] ID set to 00000000000070DB_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:25 28893] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28891] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:25 28893] Executing the following tracer actions:
+[T 18:34:25 28893] Tracer actions:
+[T 18:34:25 28893] pre_invocations(0)
+[T 18:34:25 28893] post_invocations(0)
+[T 18:34:25 28893] trace_languages(1): [go]
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm.semmle.00007150.28CA7970.slice.arm64: replacing existing signature/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm.semmle.0000714F.28CA7970.slice.arm64: replacing existing signature/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm.semmle.00007153.293F4F98.slice.arm64: replacing existing signature
+
+
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm.semmle.00007155.2D5EE228.slice.arm64: replacing existing signature
+[T 18:34:26 28890] Initializing tracer.
+[T 18:34:26 28890] Initializing tags.
+[T 18:34:26 28890] ID set to 00000000000070DA_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 28890] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:26 28886] Executing the following tracer actions:
+[T 18:34:26 28890] Executing the following tracer actions:
+[T 18:34:26 28890] Tracer actions:
+[T 18:34:26 28890] pre_invocations(0)
+[T 18:34:26 28890] post_invocations(0)
+[T 18:34:26 28890] trace_languages(1): [go]
+[T 18:34:26 28894] Initializing tracer.
+[T 18:34:26 28891] Executing the following tracer actions:
+[T 18:34:26 28886] Tracer actions:
+[T 18:34:26 28886] pre_invocations(0)
+[T 18:34:26 28886] post_invocations(0)
+[T 18:34:26 28886] trace_languages(1): [go]
+[T 18:34:26 28894] Initializing tags.
+[T 18:34:26 28894] ID set to 00000000000070DE_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 28891] Tracer actions:
+[T 18:34:26 28891] pre_invocations(0)
+[T 18:34:26 28891] post_invocations(0)
+[T 18:34:26 28891] trace_languages(1): [go]
+[T 18:34:26 28894] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:26 28894] Executing the following tracer actions:
+[T 18:34:26 28894] Tracer actions:
+[T 18:34:26 28894] pre_invocations(0)
+[T 18:34:26 28894] post_invocations(0)
+[T 18:34:26 28894] trace_languages(1): [go]
+[T 18:34:26 29027] Initializing tracer.
+[T 18:34:26 29011] Initializing tracer.
+[T 18:34:26 29011] Initializing tags.
+[T 18:34:26 29027] Initializing tags.
+[T 18:34:26 29027] ID set to 0000000000007163_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 29027] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:26 29011] ID set to 0000000000007153_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 29011] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:26 29027] Executing the following tracer actions:
+[T 18:34:26 29011] Executing the following tracer actions:
+[T 18:34:26 29027] Tracer actions:
+[T 18:34:26 29027] pre_invocations(0)
+[T 18:34:26 29027] post_invocations(0)
+[T 18:34:26 29027] trace_languages(1): [go]
+[T 18:34:26 29011] Tracer actions:
+[T 18:34:26 29011] pre_invocations(0)
+[T 18:34:26 29011] post_invocations(0)
+[T 18:34:26 29011] trace_languages(1): [go]
+[T 18:34:26 29015] Initializing tracer.
+[T 18:34:26 29015] Initializing tags.
+[T 18:34:26 29015] ID set to 0000000000007157_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 29015] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:26 29015] Executing the following tracer actions:
+[T 18:34:26 29015] Tracer actions:
+[T 18:34:26 29015] pre_invocations(0)
+[T 18:34:26 29015] post_invocations(0)
+[T 18:34:26 29015] trace_languages(1): [go]
+[T 18:34:26 29007] Initializing tracer.
+[T 18:34:26 29007] Initializing tags.
+[T 18:34:26 29007] ID set to 000000000000714F_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 29007] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:26 29007] Executing the following tracer actions:
+[T 18:34:26 29007] Tracer actions:
+[T 18:34:26 29007] pre_invocations(0)
+[T 18:34:26 29007] post_invocations(0)
+[T 18:34:26 29007] trace_languages(1): [go]
+[T 18:34:26 29013] Initializing tracer.
+[T 18:34:26 29013] Initializing tags.
+[T 18:34:26 29013] ID set to 0000000000007155_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 29013] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:26 29013] Executing the following tracer actions:
+[T 18:34:26 29013] Tracer actions:
+[T 18:34:26 29013] pre_invocations(0)
+[T 18:34:26 29013] post_invocations(0)
+[T 18:34:26 29013] trace_languages(1): [go]
+[T 18:34:26 29008] Initializing tracer.
+[T 18:34:26 29028] Initializing tracer.
+[T 18:34:26 29008] Initializing tags.
+[T 18:34:26 29028] Initializing tags.
+[T 18:34:26 29028] ID set to 0000000000007164_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 29008] ID set to 0000000000007150_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:26 29028] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:26 29028] Executing the following tracer actions:
+[T 18:34:26 29028] Tracer actions:
+[T 18:34:26 29028] pre_invocations(0)
+[T 18:34:26 29028] post_invocations(0)
+[T 18:34:26 29028] trace_languages(1): [go]
+[T 18:34:26 29008] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:26 29008] Executing the following tracer actions:
+[T 18:34:26 29008] Tracer actions:
+[T 18:34:26 29008] pre_invocations(0)
+[T 18:34:26 29008] post_invocations(0)
+[T 18:34:26 29008] trace_languages(1): [go]
+[T 18:34:27 29036] Attempting to switch stdout/stderr to 4...
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/cgo.semmle.0000716B.0A9CFEC8.slice.arm64: replacing existing signature
+[T 18:34:27 29035] Initializing tracer.
+[T 18:34:27 29035] Initializing tags.
+[T 18:34:27 29035] ID set to 000000000000716B_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:27 29035] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/cgo (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/cgo) ====
+[T 18:34:27 29035] Executing the following tracer actions:
+[T 18:34:27 29035] Tracer actions:
+[T 18:34:27 29035] pre_invocations(0)
+[T 18:34:27 29035] post_invocations(0)
+[T 18:34:27 29035] trace_languages(1): [go]
+[T 18:34:27 29062] Attempting to switch stdout/stderr to 4...
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/usr/bin/cc.semmle.00007185.266475F0.slice.x86_64: replacing existing signature
+[T 18:34:28 29061] Initializing tracer.
+[T 18:34:28 29061] Initializing tags.
+[T 18:34:28 29061] ID set to 0000000000007185_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:28 29061] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:28 29061] Executing the following tracer actions:
+[T 18:34:28 29061] Tracer actions:
+[T 18:34:28 29061] pre_invocations(0)
+[T 18:34:28 29061] post_invocations(0)
+[T 18:34:28 29061] trace_languages(1): [go]
+[T 18:34:28 29076] Attempting to switch stdout/stderr to 3...
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/clang.semmle.00007185.2CB01BF8.slice.x86_64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/clang.semmle.00007185.2CB01BF8.slice.x86_64: replacing existing signature
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/clang.semmle.00007185.2CB01BF8.slice.arm64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/clang.semmle.00007185.2CB01BF8.slice.arm64: replacing existing signature
+[T 18:34:39 29061] Initializing tracer.
+[T 18:34:39 29061] Initializing tags.
+[T 18:34:39 29061] ID set to 0000000000007185_0000000000000002 (parent 0000000000007185_0000000000000001)
+[T 18:34:39 29061] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:39 29061] Executing the following tracer actions:
+[T 18:34:39 29061] Tracer actions:
+[T 18:34:39 29061] pre_invocations(0)
+[T 18:34:39 29061] post_invocations(0)
+[T 18:34:39 29061] trace_languages(1): [go]
+[T 18:34:40 29241] Attempting to switch stdout/stderr to 11...
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link.semmle.00007238.01DA8490.slice.arm64: replacing existing signature
+[T 18:34:40 29240] Initializing tracer.
+[T 18:34:40 29240] Initializing tags.
+[T 18:34:40 29240] ID set to 0000000000007238_0000000000000001 (parent 00000000000070CF_0000000000000001)
+[T 18:34:40 29240] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link) ====
+[T 18:34:40 29240] Executing the following tracer actions:
+[T 18:34:40 29240] Tracer actions:
+[T 18:34:40 29240] pre_invocations(0)
+[T 18:34:40 29240] post_invocations(0)
+[T 18:34:40 29240] trace_languages(1): [go]
+2025/05/05 11:34:40 Done running packages.Load.
+2025/05/05 11:34:40 Extracting universe scope.
+2025/05/05 11:34:40 Done extracting universe scope.
+2025/05/05 11:34:40 Running go list to resolve package and module directories.
+[T 18:34:40 29246] Initializing tracer.
+[T 18:34:40 29246] Initializing tags.
+[T 18:34:40 29246] ID set to 000000000000723E_0000000000000001 (parent 0000000000007091_0000000000000001)
+[T 18:34:40 29246] ==== Candidate to intercept: /opt/homebrew/bin/go (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/bin/go) ====
+[T 18:34:40 29246] Lua: === Intercepted call to /opt/homebrew/cellar/go/1.23.0/libexec/bin/go ===
+[T 18:34:40 29246] Executing the following tracer actions:
+[T 18:34:40 29246] Tracer actions:
+[T 18:34:40 29246] pre_invocations(1)
+[T 18:34:40 29246] invocation: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor, args: [--mimic, /opt/homebrew/cellar/go/1.23.0/libexec/bin/go, list, -e, -f, , -deps, -json, .]
+[T 18:34:40 29246] post_invocations(0)
+[T 18:34:40 29246] trace_languages(1): [go]
+[T 18:34:40 29247] Attempting to switch stdout/stderr to 4...
+[T 18:34:40 29247] Initializing tracer.
+[T 18:34:40 29247] Initializing tags.
+[T 18:34:40 29247] ID set to 000000000000723F_0000000000000001 (parent 000000000000723E_0000000000000001)
+2025/05/05 11:34:40 Compiler: /opt/homebrew/cellar/go/1.23.0/libexec/bin/go
+2025/05/05 11:34:40 Non-build command '/opt/homebrew/cellar/go/1.23.0/libexec/bin/go list -e -f  -deps -json .'; skipping
+[T 18:34:40 29246] Extractor /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor terminated with exit code 0.
+[T 18:34:40 29249] Attempting to switch stdout/stderr to 11...
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/opt/homebrew/bin/git.semmle.00007240.387C05A0.slice.arm64: replacing existing signature
+[T 18:34:41 29248] Initializing tracer.
+[T 18:34:41 29248] Initializing tags.
+[T 18:34:41 29248] ID set to 0000000000007240_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29248] ==== Candidate to intercept: /opt/homebrew/bin/git (canonical: /opt/homebrew/Cellar/git/2.44.0/bin/git) ====
+[T 18:34:41 29248] Executing the following tracer actions:
+[T 18:34:41 29248] Tracer actions:
+[T 18:34:41 29248] pre_invocations(0)
+[T 18:34:41 29248] post_invocations(0)
+[T 18:34:41 29248] trace_languages(1): [go]
+[T 18:34:41 29264] Initializing tracer.
+[T 18:34:41 29264] Initializing tags.
+[T 18:34:41 29264] ID set to 0000000000007250_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29264] ==== Candidate to intercept: /opt/homebrew/bin/git (canonical: /opt/homebrew/Cellar/git/2.44.0/bin/git) ====
+[T 18:34:41 29264] Executing the following tracer actions:
+[T 18:34:41 29264] Tracer actions:
+[T 18:34:41 29264] pre_invocations(0)
+[T 18:34:41 29264] post_invocations(0)
+[T 18:34:41 29264] trace_languages(1): [go]
+[T 18:34:41 29265] Initializing tracer.
+[T 18:34:41 29268] Initializing tracer.
+[T 18:34:41 29270] Initializing tracer.
+[T 18:34:41 29267] Initializing tracer.
+[T 18:34:41 29266] Initializing tracer.
+[T 18:34:41 29272] Initializing tracer.
+[T 18:34:41 29269] Initializing tracer.
+[T 18:34:41 29271] Initializing tracer.
+[T 18:34:41 29265] Initializing tags.
+[T 18:34:41 29268] Initializing tags.
+[T 18:34:41 29267] Initializing tags.
+[T 18:34:41 29277] Initializing tracer.
+[T 18:34:41 29269] Initializing tags.
+[T 18:34:41 29271] Initializing tags.
+[T 18:34:41 29276] Initializing tracer.
+[T 18:34:41 29270] Initializing tags.
+[T 18:34:41 29273] Initializing tracer.
+[T 18:34:41 29274] Initializing tracer.
+[T 18:34:41 29275] Initializing tracer.
+[T 18:34:41 29272] Initializing tags.
+[T 18:34:41 29266] Initializing tags.
+[T 18:34:41 29265] ID set to 0000000000007251_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29278] Initializing tracer.
+[T 18:34:41 29267] ID set to 0000000000007253_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29277] Initializing tags.
+[T 18:34:41 29266] ID set to 0000000000007252_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29267] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29273] Initializing tags.
+[T 18:34:41 29275] Initializing tags.
+[T 18:34:41 29278] Initializing tags.
+[T 18:34:41 29280] Initializing tracer.
+[T 18:34:41 29265] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29274] Initializing tags.
+[T 18:34:41 29276] Initializing tags.
+[T 18:34:41 29279] Initializing tracer.
+[T 18:34:41 29277] ID set to 000000000000725D_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29266] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29279] Initializing tags.
+[T 18:34:41 29267] Executing the following tracer actions:
+[T 18:34:41 29280] Initializing tags.
+[T 18:34:41 29265] Executing the following tracer actions:
+[T 18:34:41 29267] Tracer actions:
+[T 18:34:41 29265] Tracer actions:
+[T 18:34:41 29267] pre_invocations(0)
+[T 18:34:41 29265] pre_invocations(0)
+[T 18:34:41 29267] post_invocations(0)
+[T 18:34:41 29265] post_invocations(0)
+[T 18:34:41 29265] trace_languages(1): [go]
+[T 18:34:41 29267] trace_languages(1): [go]
+[T 18:34:41 29274] ID set to 000000000000725A_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29274] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29279] ID set to 000000000000725F_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29280] ID set to 0000000000007260_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29274] Executing the following tracer actions:
+[T 18:34:41 29279] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29272] ID set to 0000000000007258_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29274] Tracer actions:
+[T 18:34:41 29279] Executing the following tracer actions:
+[T 18:34:41 29274] pre_invocations(0)
+[T 18:34:41 29274] post_invocations(0)
+[T 18:34:41 29274] trace_languages(1): [go]
+[T 18:34:41 29277] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29276] ID set to 000000000000725C_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29272] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29272] Executing the following tracer actions:
+[T 18:34:41 29270] ID set to 0000000000007256_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29276] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29272] Tracer actions:
+[T 18:34:41 29276] Executing the following tracer actions:
+[T 18:34:41 29270] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29272] pre_invocations(0)
+[T 18:34:41 29272] post_invocations(0)
+[T 18:34:41 29272] trace_languages(1): [go]
+[T 18:34:41 29276] Tracer actions:
+[T 18:34:41 29270] Executing the following tracer actions:
+[T 18:34:41 29276] pre_invocations(0)
+[T 18:34:41 29276] post_invocations(0)
+[T 18:34:41 29276] trace_languages(1): [go]
+[T 18:34:41 29270] Tracer actions:
+[T 18:34:41 29270] pre_invocations(0)
+[T 18:34:41 29270] post_invocations(0)
+[T 18:34:41 29270] trace_languages(1): [go]
+[T 18:34:41 29266] Executing the following tracer actions:
+[T 18:34:41 29279] Tracer actions:
+[T 18:34:41 29279] pre_invocations(0)
+[T 18:34:41 29279] post_invocations(0)
+[T 18:34:41 29279] trace_languages(1): [go]
+[T 18:34:41 29285] Initializing tracer.
+[T 18:34:41 29280] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29285] Initializing tags.
+[T 18:34:41 29281] Initializing tracer.
+[T 18:34:41 29282] Initializing tracer.
+[T 18:34:41 29277] Executing the following tracer actions:
+[T 18:34:41 29281] Initializing tags.
+[T 18:34:41 29282] Initializing tags.
+[T 18:34:41 29275] ID set to 000000000000725B_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29284] Initializing tracer.
+[T 18:34:41 29283] Initializing tracer.
+[T 18:34:41 29266] Tracer actions:
+[T 18:34:41 29266] pre_invocations(0)
+[T 18:34:41 29266] post_invocations(0)
+[T 18:34:41 29266] trace_languages(1): [go]
+[T 18:34:41 29284] Initializing tags.
+[T 18:34:41 29280] Executing the following tracer actions:
+[T 18:34:41 29277] Tracer actions:
+[T 18:34:41 29277] pre_invocations(0)
+[T 18:34:41 29277] post_invocations(0)
+[T 18:34:41 29277] trace_languages(1): [go]
+[T 18:34:41 29280] Tracer actions:
+[T 18:34:41 29280] pre_invocations(0)
+[T 18:34:41 29280] post_invocations(0)
+[T 18:34:41 29280] trace_languages(1): [go]
+[T 18:34:41 29282] ID set to 0000000000007262_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29282] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:41 29284] ID set to 0000000000007264_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29284] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:41 29282] Executing the following tracer actions:
+[T 18:34:41 29285] ID set to 0000000000007265_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29275] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29282] Tracer actions:
+[T 18:34:41 29282] pre_invocations(0)
+[T 18:34:41 29282] post_invocations(0)
+[T 18:34:41 29282] trace_languages(1): [go]
+[T 18:34:41 29278] ID set to 000000000000725E_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29278] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29269] ID set to 0000000000007255_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29283] Initializing tags.
+[T 18:34:41 29269] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29278] Executing the following tracer actions:
+[T 18:34:41 29278] Tracer actions:
+[T 18:34:41 29269] Executing the following tracer actions:
+[T 18:34:41 29278] pre_invocations(0)
+[T 18:34:41 29278] post_invocations(0)
+[T 18:34:41 29278] trace_languages(1): [go]
+[T 18:34:41 29269] Tracer actions:
+[T 18:34:41 29269] pre_invocations(0)
+[T 18:34:41 29269] post_invocations(0)
+[T 18:34:41 29269] trace_languages(1): [go]
+[T 18:34:41 29285] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:41 29284] Executing the following tracer actions:
+[T 18:34:41 29275] Executing the following tracer actions:
+[T 18:34:41 29284] Tracer actions:
+[T 18:34:41 29285] Executing the following tracer actions:
+[T 18:34:41 29284] pre_invocations(0)
+[T 18:34:41 29284] post_invocations(0)
+[T 18:34:41 29284] trace_languages(1): [go]
+[T 18:34:41 29285] Tracer actions:
+[T 18:34:41 29285] pre_invocations(0)
+[T 18:34:41 29285] post_invocations(0)
+[T 18:34:41 29285] trace_languages(1): [go]
+[T 18:34:41 29281] ID set to 0000000000007261_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29281] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:41 29271] ID set to 0000000000007257_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29271] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29268] ID set to 0000000000007254_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29268] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29283] ID set to 0000000000007263_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29271] Executing the following tracer actions:
+[T 18:34:41 29273] ID set to 0000000000007259_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29268] Executing the following tracer actions:
+[T 18:34:41 29271] Tracer actions:
+[T 18:34:41 29271] pre_invocations(0)
+[T 18:34:41 29271] post_invocations(0)
+[T 18:34:41 29271] trace_languages(1): [go]
+[T 18:34:41 29275] Tracer actions:
+[T 18:34:41 29275] pre_invocations(0)
+[T 18:34:41 29275] post_invocations(0)
+[T 18:34:41 29275] trace_languages(1): [go]
+[T 18:34:41 29281] Executing the following tracer actions:
+[T 18:34:41 29283] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:41 29281] Tracer actions:
+[T 18:34:41 29281] pre_invocations(0)
+[T 18:34:41 29281] post_invocations(0)
+[T 18:34:41 29281] trace_languages(1): [go]
+[T 18:34:41 29283] Executing the following tracer actions:
+[T 18:34:41 29283] Tracer actions:
+[T 18:34:41 29283] pre_invocations(0)
+[T 18:34:41 29283] post_invocations(0)
+[T 18:34:41 29283] trace_languages(1): [go]
+[T 18:34:41 29268] Tracer actions:
+[T 18:34:41 29268] pre_invocations(0)
+[T 18:34:41 29268] post_invocations(0)
+[T 18:34:41 29268] trace_languages(1): [go]
+[T 18:34:41 29273] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:41 29273] Executing the following tracer actions:
+[T 18:34:41 29273] Tracer actions:
+[T 18:34:41 29273] pre_invocations(0)
+[T 18:34:41 29273] post_invocations(0)
+[T 18:34:41 29273] trace_languages(1): [go]
+[T 18:34:41 29286] Initializing tracer.
+[T 18:34:41 29286] Initializing tags.
+[T 18:34:41 29286] ID set to 0000000000007266_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29286] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/cgo (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/cgo) ====
+[T 18:34:41 29286] Executing the following tracer actions:
+[T 18:34:41 29286] Tracer actions:
+[T 18:34:41 29286] pre_invocations(0)
+[T 18:34:41 29286] post_invocations(0)
+[T 18:34:41 29286] trace_languages(1): [go]
+[T 18:34:41 29287] Initializing tracer.
+[T 18:34:41 29287] Initializing tags.
+[T 18:34:41 29287] ID set to 0000000000007267_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29287] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:41 29287] Executing the following tracer actions:
+[T 18:34:41 29287] Tracer actions:
+[T 18:34:41 29287] pre_invocations(0)
+[T 18:34:41 29287] post_invocations(0)
+[T 18:34:41 29287] trace_languages(1): [go]
+[T 18:34:41 29287] Initializing tracer.
+[T 18:34:41 29287] Initializing tags.
+[T 18:34:41 29287] ID set to 0000000000007267_0000000000000002 (parent 0000000000007267_0000000000000001)
+[T 18:34:41 29287] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:41 29287] Executing the following tracer actions:
+[T 18:34:41 29287] Tracer actions:
+[T 18:34:41 29287] pre_invocations(0)
+[T 18:34:41 29287] post_invocations(0)
+[T 18:34:41 29287] trace_languages(1): [go]
+[T 18:34:41 29288] Initializing tracer.
+[T 18:34:41 29288] Initializing tags.
+[T 18:34:41 29288] ID set to 0000000000007268_0000000000000001 (parent 000000000000723E_0000000000000001)
+[T 18:34:41 29288] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link) ====
+[T 18:34:41 29288] Executing the following tracer actions:
+[T 18:34:41 29288] Tracer actions:
+[T 18:34:41 29288] pre_invocations(0)
+[T 18:34:41 29288] post_invocations(0)
+[T 18:34:41 29288] trace_languages(1): [go]
+2025/05/05 11:34:41 Done running go list deps: resolved 231 packages.
+2025/05/05 11:34:41 Processing package internal/goarch.
+2025/05/05 11:34:41 Extracting types for package internal/goarch.
+2025/05/05 11:34:41 Done extracting types for package internal/goarch.
+2025/05/05 11:34:41 Processing package unsafe.
+2025/05/05 11:34:41 Extracting types for package unsafe.
+2025/05/05 11:34:41 Done extracting types for package unsafe.
+2025/05/05 11:34:41 Processing package internal/abi.
+2025/05/05 11:34:41 Extracting types for package internal/abi.
+2025/05/05 11:34:41 Done extracting types for package internal/abi.
+2025/05/05 11:34:41 Processing package internal/unsafeheader.
+2025/05/05 11:34:41 Extracting types for package internal/unsafeheader.
+2025/05/05 11:34:41 Done extracting types for package internal/unsafeheader.
+2025/05/05 11:34:41 Processing package internal/cpu.
+2025/05/05 11:34:41 Extracting types for package internal/cpu.
+2025/05/05 11:34:41 Done extracting types for package internal/cpu.
+2025/05/05 11:34:41 Processing package internal/bytealg.
+2025/05/05 11:34:41 Extracting types for package internal/bytealg.
+2025/05/05 11:34:41 Done extracting types for package internal/bytealg.
+2025/05/05 11:34:41 Processing package internal/byteorder.
+2025/05/05 11:34:41 Extracting types for package internal/byteorder.
+2025/05/05 11:34:41 Done extracting types for package internal/byteorder.
+2025/05/05 11:34:41 Processing package internal/chacha8rand.
+2025/05/05 11:34:41 Extracting types for package internal/chacha8rand.
+2025/05/05 11:34:41 Done extracting types for package internal/chacha8rand.
+2025/05/05 11:34:41 Processing package internal/coverage/rtcov.
+2025/05/05 11:34:41 Extracting types for package internal/coverage/rtcov.
+2025/05/05 11:34:41 Done extracting types for package internal/coverage/rtcov.
+2025/05/05 11:34:41 Processing package internal/godebugs.
+2025/05/05 11:34:41 Extracting types for package internal/godebugs.
+2025/05/05 11:34:41 Done extracting types for package internal/godebugs.
+2025/05/05 11:34:41 Processing package internal/goexperiment.
+2025/05/05 11:34:41 Extracting types for package internal/goexperiment.
+2025/05/05 11:34:41 Done extracting types for package internal/goexperiment.
+2025/05/05 11:34:41 Processing package internal/goos.
+2025/05/05 11:34:41 Extracting types for package internal/goos.
+2025/05/05 11:34:41 Done extracting types for package internal/goos.
+2025/05/05 11:34:41 Processing package internal/profilerecord.
+2025/05/05 11:34:41 Extracting types for package internal/profilerecord.
+2025/05/05 11:34:41 Done extracting types for package internal/profilerecord.
+2025/05/05 11:34:41 Processing package internal/runtime/atomic.
+2025/05/05 11:34:41 Extracting types for package internal/runtime/atomic.
+2025/05/05 11:34:41 Done extracting types for package internal/runtime/atomic.
+2025/05/05 11:34:41 Processing package internal/runtime/exithook.
+2025/05/05 11:34:41 Extracting types for package internal/runtime/exithook.
+2025/05/05 11:34:41 Done extracting types for package internal/runtime/exithook.
+2025/05/05 11:34:41 Processing package internal/stringslite.
+2025/05/05 11:34:41 Extracting types for package internal/stringslite.
+2025/05/05 11:34:41 Done extracting types for package internal/stringslite.
+2025/05/05 11:34:41 Processing package runtime/internal/math.
+2025/05/05 11:34:41 Extracting types for package runtime/internal/math.
+2025/05/05 11:34:41 Done extracting types for package runtime/internal/math.
+2025/05/05 11:34:41 Processing package runtime/internal/sys.
+2025/05/05 11:34:41 Extracting types for package runtime/internal/sys.
+2025/05/05 11:34:41 Done extracting types for package runtime/internal/sys.
+2025/05/05 11:34:41 Processing package runtime.
+2025/05/05 11:34:41 Extracting types for package runtime.
+2025/05/05 11:34:41 Done extracting types for package runtime.
+2025/05/05 11:34:41 Processing package internal/reflectlite.
+2025/05/05 11:34:41 Extracting types for package internal/reflectlite.
+2025/05/05 11:34:41 Done extracting types for package internal/reflectlite.
+2025/05/05 11:34:41 Processing package errors.
+2025/05/05 11:34:41 Extracting types for package errors.
+2025/05/05 11:34:41 Done extracting types for package errors.
+2025/05/05 11:34:41 Processing package internal/race.
+2025/05/05 11:34:41 Extracting types for package internal/race.
+2025/05/05 11:34:41 Done extracting types for package internal/race.
+2025/05/05 11:34:41 Processing package sync/atomic.
+2025/05/05 11:34:41 Extracting types for package sync/atomic.
+2025/05/05 11:34:41 Done extracting types for package sync/atomic.
+2025/05/05 11:34:41 Processing package sync.
+2025/05/05 11:34:41 Extracting types for package sync.
+2025/05/05 11:34:41 Done extracting types for package sync.
+2025/05/05 11:34:41 Processing package internal/bisect.
+2025/05/05 11:34:41 Extracting types for package internal/bisect.
+2025/05/05 11:34:41 Done extracting types for package internal/bisect.
+2025/05/05 11:34:41 Processing package internal/godebug.
+2025/05/05 11:34:41 Extracting types for package internal/godebug.
+2025/05/05 11:34:41 Done extracting types for package internal/godebug.
+2025/05/05 11:34:41 Processing package internal/asan.
+2025/05/05 11:34:41 Extracting types for package internal/asan.
+2025/05/05 11:34:41 Done extracting types for package internal/asan.
+2025/05/05 11:34:41 Processing package internal/itoa.
+2025/05/05 11:34:41 Extracting types for package internal/itoa.
+2025/05/05 11:34:41 Done extracting types for package internal/itoa.
+2025/05/05 11:34:41 Processing package internal/msan.
+2025/05/05 11:34:41 Extracting types for package internal/msan.
+2025/05/05 11:34:41 Done extracting types for package internal/msan.
+2025/05/05 11:34:41 Processing package internal/oserror.
+2025/05/05 11:34:41 Extracting types for package internal/oserror.
+2025/05/05 11:34:41 Done extracting types for package internal/oserror.
+2025/05/05 11:34:41 Processing package syscall.
+2025/05/05 11:34:41 Extracting types for package syscall.
+2025/05/05 11:34:41 Done extracting types for package syscall.
+2025/05/05 11:34:41 Processing package time.
+2025/05/05 11:34:41 Extracting types for package time.
+2025/05/05 11:34:41 Done extracting types for package time.
+2025/05/05 11:34:41 Processing package context.
+2025/05/05 11:34:41 Extracting types for package context.
+2025/05/05 11:34:41 Done extracting types for package context.
+2025/05/05 11:34:41 Processing package encoding.
+2025/05/05 11:34:41 Extracting types for package encoding.
+2025/05/05 11:34:41 Done extracting types for package encoding.
+2025/05/05 11:34:41 Processing package cmp.
+2025/05/05 11:34:41 Extracting types for package cmp.
+2025/05/05 11:34:41 Done extracting types for package cmp.
+2025/05/05 11:34:41 Processing package iter.
+2025/05/05 11:34:41 Extracting types for package iter.
+2025/05/05 11:34:41 Done extracting types for package iter.
+2025/05/05 11:34:41 Processing package math/bits.
+2025/05/05 11:34:41 Extracting types for package math/bits.
+2025/05/05 11:34:41 Done extracting types for package math/bits.
+2025/05/05 11:34:41 Processing package math.
+2025/05/05 11:34:41 Extracting types for package math.
+2025/05/05 11:34:41 Done extracting types for package math.
+2025/05/05 11:34:41 Processing package unicode/utf8.
+2025/05/05 11:34:41 Extracting types for package unicode/utf8.
+2025/05/05 11:34:41 Done extracting types for package unicode/utf8.
+2025/05/05 11:34:41 Processing package strconv.
+2025/05/05 11:34:41 Extracting types for package strconv.
+2025/05/05 11:34:41 Done extracting types for package strconv.
+2025/05/05 11:34:41 Processing package unicode.
+2025/05/05 11:34:41 Extracting types for package unicode.
+2025/05/05 11:34:41 Done extracting types for package unicode.
+2025/05/05 11:34:41 Processing package reflect.
+2025/05/05 11:34:41 Extracting types for package reflect.
+2025/05/05 11:34:41 Done extracting types for package reflect.
+2025/05/05 11:34:41 Processing package slices.
+2025/05/05 11:34:41 Extracting types for package slices.
+2025/05/05 11:34:41 Done extracting types for package slices.
+2025/05/05 11:34:41 Processing package internal/fmtsort.
+2025/05/05 11:34:41 Extracting types for package internal/fmtsort.
+2025/05/05 11:34:41 Done extracting types for package internal/fmtsort.
+2025/05/05 11:34:41 Processing package io.
+2025/05/05 11:34:41 Extracting types for package io.
+2025/05/05 11:34:41 Done extracting types for package io.
+2025/05/05 11:34:41 Processing package path.
+2025/05/05 11:34:41 Extracting types for package path.
+2025/05/05 11:34:41 Done extracting types for package path.
+2025/05/05 11:34:41 Processing package io/fs.
+2025/05/05 11:34:41 Extracting types for package io/fs.
+2025/05/05 11:34:41 Done extracting types for package io/fs.
+2025/05/05 11:34:41 Processing package internal/filepathlite.
+2025/05/05 11:34:41 Extracting types for package internal/filepathlite.
+2025/05/05 11:34:41 Done extracting types for package internal/filepathlite.
+2025/05/05 11:34:41 Processing package internal/syscall/unix.
+2025/05/05 11:34:41 Extracting types for package internal/syscall/unix.
+2025/05/05 11:34:41 Done extracting types for package internal/syscall/unix.
+2025/05/05 11:34:41 Processing package internal/poll.
+2025/05/05 11:34:41 Extracting types for package internal/poll.
+2025/05/05 11:34:41 Done extracting types for package internal/poll.
+2025/05/05 11:34:41 Processing package internal/syscall/execenv.
+2025/05/05 11:34:41 Extracting types for package internal/syscall/execenv.
+2025/05/05 11:34:41 Done extracting types for package internal/syscall/execenv.
+2025/05/05 11:34:41 Processing package internal/testlog.
+2025/05/05 11:34:41 Extracting types for package internal/testlog.
+2025/05/05 11:34:41 Done extracting types for package internal/testlog.
+2025/05/05 11:34:41 Processing package os.
+2025/05/05 11:34:41 Extracting types for package os.
+2025/05/05 11:34:41 Done extracting types for package os.
+2025/05/05 11:34:41 Processing package fmt.
+2025/05/05 11:34:41 Extracting types for package fmt.
+2025/05/05 11:34:41 Done extracting types for package fmt.
+2025/05/05 11:34:41 Processing package strings.
+2025/05/05 11:34:41 Extracting types for package strings.
+2025/05/05 11:34:41 Done extracting types for package strings.
+2025/05/05 11:34:41 Processing package flag.
+2025/05/05 11:34:41 Extracting types for package flag.
+2025/05/05 11:34:41 Done extracting types for package flag.
+2025/05/05 11:34:41 Processing package bytes.
+2025/05/05 11:34:41 Extracting types for package bytes.
+2025/05/05 11:34:41 Done extracting types for package bytes.
+2025/05/05 11:34:41 Processing package bufio.
+2025/05/05 11:34:41 Extracting types for package bufio.
+2025/05/05 11:34:41 Done extracting types for package bufio.
+2025/05/05 11:34:41 Processing package encoding/binary.
+2025/05/05 11:34:41 Extracting types for package encoding/binary.
+2025/05/05 11:34:41 Done extracting types for package encoding/binary.
+2025/05/05 11:34:41 Processing package encoding/base64.
+2025/05/05 11:34:41 Extracting types for package encoding/base64.
+2025/05/05 11:34:41 Done extracting types for package encoding/base64.
+2025/05/05 11:34:41 Processing package unicode/utf16.
+2025/05/05 11:34:41 Extracting types for package unicode/utf16.
+2025/05/05 11:34:41 Done extracting types for package unicode/utf16.
+2025/05/05 11:34:41 Processing package encoding/json.
+2025/05/05 11:34:41 Extracting types for package encoding/json.
+2025/05/05 11:34:41 Done extracting types for package encoding/json.
+2025/05/05 11:34:41 Processing package github.com/BurntSushi/toml/internal.
+2025/05/05 11:34:41 Extracting types for package github.com/BurntSushi/toml/internal.
+2025/05/05 11:34:41 Done extracting types for package github.com/BurntSushi/toml/internal.
+2025/05/05 11:34:41 Processing package sort.
+2025/05/05 11:34:41 Extracting types for package sort.
+2025/05/05 11:34:41 Done extracting types for package sort.
+2025/05/05 11:34:41 Processing package github.com/BurntSushi/toml.
+2025/05/05 11:34:41 Extracting types for package github.com/BurntSushi/toml.
+2025/05/05 11:34:41 Done extracting types for package github.com/BurntSushi/toml.
+2025/05/05 11:34:41 Processing package log/internal.
+2025/05/05 11:34:41 Extracting types for package log/internal.
+2025/05/05 11:34:41 Done extracting types for package log/internal.
+2025/05/05 11:34:41 Processing package log.
+2025/05/05 11:34:41 Extracting types for package log.
+2025/05/05 11:34:41 Done extracting types for package log.
+2025/05/05 11:34:41 Processing package log/slog/internal.
+2025/05/05 11:34:41 Extracting types for package log/slog/internal.
+2025/05/05 11:34:41 Done extracting types for package log/slog/internal.
+2025/05/05 11:34:41 Processing package log/slog/internal/buffer.
+2025/05/05 11:34:41 Extracting types for package log/slog/internal/buffer.
+2025/05/05 11:34:41 Done extracting types for package log/slog/internal/buffer.
+2025/05/05 11:34:41 Processing package log/slog.
+2025/05/05 11:34:41 Extracting types for package log/slog.
+2025/05/05 11:34:41 Done extracting types for package log/slog.
+2025/05/05 11:34:41 Processing package github.com/hohn/mrvacommander/config/mcc.
+2025/05/05 11:34:41 Extracting types for package github.com/hohn/mrvacommander/config/mcc.
+2025/05/05 11:34:41 Done extracting types for package github.com/hohn/mrvacommander/config/mcc.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo/types.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo/types.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo/types.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo/internal/registry.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo/internal/registry.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo/internal/registry.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo/providers/aix.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo/providers/aix.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo/providers/aix.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/net/dns/dnsmessage.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/net/dns/dnsmessage.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/net/dns/dnsmessage.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/net/route.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/net/route.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/net/route.
+2025/05/05 11:34:41 Processing package internal/nettrace.
+2025/05/05 11:34:41 Extracting types for package internal/nettrace.
+2025/05/05 11:34:41 Done extracting types for package internal/nettrace.
+2025/05/05 11:34:41 Processing package internal/singleflight.
+2025/05/05 11:34:41 Extracting types for package internal/singleflight.
+2025/05/05 11:34:41 Done extracting types for package internal/singleflight.
+2025/05/05 11:34:41 Processing package math/rand/v2.
+2025/05/05 11:34:41 Extracting types for package math/rand/v2.
+2025/05/05 11:34:41 Done extracting types for package math/rand/v2.
+2025/05/05 11:34:41 Processing package internal/concurrent.
+2025/05/05 11:34:41 Extracting types for package internal/concurrent.
+2025/05/05 11:34:41 Done extracting types for package internal/concurrent.
+2025/05/05 11:34:41 Processing package internal/weak.
+2025/05/05 11:34:41 Extracting types for package internal/weak.
+2025/05/05 11:34:41 Done extracting types for package internal/weak.
+2025/05/05 11:34:41 Processing package unique.
+2025/05/05 11:34:41 Extracting types for package unique.
+2025/05/05 11:34:41 Done extracting types for package unique.
+2025/05/05 11:34:41 Processing package net/netip.
+2025/05/05 11:34:41 Extracting types for package net/netip.
+2025/05/05 11:34:41 Done extracting types for package net/netip.
+2025/05/05 11:34:41 Processing package net.
+2025/05/05 11:34:41 Extracting types for package net.
+2025/05/05 11:34:41 Done extracting types for package net.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo/providers/shared.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo/providers/shared.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo/providers/shared.
+2025/05/05 11:34:41 Processing package golang.org/x/sys/unix.
+2025/05/05 11:34:41 Extracting types for package golang.org/x/sys/unix.
+2025/05/05 11:34:41 Done extracting types for package golang.org/x/sys/unix.
+2025/05/05 11:34:41 Processing package encoding/hex.
+2025/05/05 11:34:41 Extracting types for package encoding/hex.
+2025/05/05 11:34:41 Done extracting types for package encoding/hex.
+2025/05/05 11:34:41 Processing package encoding/xml.
+2025/05/05 11:34:41 Extracting types for package encoding/xml.
+2025/05/05 11:34:41 Done extracting types for package encoding/xml.
+2025/05/05 11:34:41 Processing package hash.
+2025/05/05 11:34:41 Extracting types for package hash.
+2025/05/05 11:34:41 Done extracting types for package hash.
+2025/05/05 11:34:41 Processing package hash/crc32.
+2025/05/05 11:34:41 Extracting types for package hash/crc32.
+2025/05/05 11:34:41 Done extracting types for package hash/crc32.
+2025/05/05 11:34:41 Processing package io/ioutil.
+2025/05/05 11:34:41 Extracting types for package io/ioutil.
+2025/05/05 11:34:41 Done extracting types for package io/ioutil.
+2025/05/05 11:34:41 Processing package howett.net/plist.
+2025/05/05 11:34:41 Extracting types for package howett.net/plist.
+2025/05/05 11:34:41 Done extracting types for package howett.net/plist.
+2025/05/05 11:34:41 Processing package runtime/cgo.
+2025/05/05 11:34:41 Extracting types for package runtime/cgo.
+2025/05/05 11:34:41 Done extracting types for package runtime/cgo.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo/providers/darwin.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo/providers/darwin.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo/providers/darwin.
+2025/05/05 11:34:41 Processing package path/filepath.
+2025/05/05 11:34:41 Extracting types for package path/filepath.
+2025/05/05 11:34:41 Done extracting types for package path/filepath.
+2025/05/05 11:34:41 Processing package regexp/syntax.
+2025/05/05 11:34:41 Extracting types for package regexp/syntax.
+2025/05/05 11:34:41 Done extracting types for package regexp/syntax.
+2025/05/05 11:34:41 Processing package regexp.
+2025/05/05 11:34:41 Extracting types for package regexp.
+2025/05/05 11:34:41 Done extracting types for package regexp.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo/providers/linux.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo/providers/linux.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo/providers/linux.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo/providers/windows.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo/providers/windows.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo/providers/windows.
+2025/05/05 11:34:41 Processing package github.com/elastic/go-sysinfo.
+2025/05/05 11:34:41 Extracting types for package github.com/elastic/go-sysinfo.
+2025/05/05 11:34:41 Done extracting types for package github.com/elastic/go-sysinfo.
+2025/05/05 11:34:41 Processing package crypto.
+2025/05/05 11:34:41 Extracting types for package crypto.
+2025/05/05 11:34:41 Done extracting types for package crypto.
+2025/05/05 11:34:41 Processing package crypto/md5.
+2025/05/05 11:34:41 Extracting types for package crypto/md5.
+2025/05/05 11:34:41 Done extracting types for package crypto/md5.
+2025/05/05 11:34:41 Processing package crypto/internal/alias.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/alias.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/alias.
+2025/05/05 11:34:41 Processing package crypto/subtle.
+2025/05/05 11:34:41 Extracting types for package crypto/subtle.
+2025/05/05 11:34:41 Done extracting types for package crypto/subtle.
+2025/05/05 11:34:41 Processing package crypto/cipher.
+2025/05/05 11:34:41 Extracting types for package crypto/cipher.
+2025/05/05 11:34:41 Done extracting types for package crypto/cipher.
+2025/05/05 11:34:41 Processing package crypto/internal/boring/sig.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/boring/sig.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/boring/sig.
+2025/05/05 11:34:41 Processing package crypto/internal/boring.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/boring.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/boring.
+2025/05/05 11:34:41 Processing package crypto/internal/randutil.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/randutil.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/randutil.
+2025/05/05 11:34:41 Processing package math/rand.
+2025/05/05 11:34:41 Extracting types for package math/rand.
+2025/05/05 11:34:41 Done extracting types for package math/rand.
+2025/05/05 11:34:41 Processing package math/big.
+2025/05/05 11:34:41 Extracting types for package math/big.
+2025/05/05 11:34:41 Done extracting types for package math/big.
+2025/05/05 11:34:41 Processing package crypto/rand.
+2025/05/05 11:34:41 Extracting types for package crypto/rand.
+2025/05/05 11:34:41 Done extracting types for package crypto/rand.
+2025/05/05 11:34:41 Processing package crypto/sha1.
+2025/05/05 11:34:41 Extracting types for package crypto/sha1.
+2025/05/05 11:34:41 Done extracting types for package crypto/sha1.
+2025/05/05 11:34:41 Processing package database/sql/driver.
+2025/05/05 11:34:41 Extracting types for package database/sql/driver.
+2025/05/05 11:34:41 Done extracting types for package database/sql/driver.
+2025/05/05 11:34:41 Processing package github.com/google/uuid.
+2025/05/05 11:34:41 Extracting types for package github.com/google/uuid.
+2025/05/05 11:34:41 Done extracting types for package github.com/google/uuid.
+2025/05/05 11:34:41 Processing package os/user.
+2025/05/05 11:34:41 Extracting types for package os/user.
+2025/05/05 11:34:41 Done extracting types for package os/user.
+2025/05/05 11:34:41 Processing package archive/tar.
+2025/05/05 11:34:41 Extracting types for package archive/tar.
+2025/05/05 11:34:41 Done extracting types for package archive/tar.
+2025/05/05 11:34:41 Processing package crypto/sha256.
+2025/05/05 11:34:41 Extracting types for package crypto/sha256.
+2025/05/05 11:34:41 Done extracting types for package crypto/sha256.
+2025/05/05 11:34:41 Processing package container/list.
+2025/05/05 11:34:41 Extracting types for package container/list.
+2025/05/05 11:34:41 Done extracting types for package container/list.
+2025/05/05 11:34:41 Processing package crypto/aes.
+2025/05/05 11:34:41 Extracting types for package crypto/aes.
+2025/05/05 11:34:41 Done extracting types for package crypto/aes.
+2025/05/05 11:34:41 Processing package crypto/des.
+2025/05/05 11:34:41 Extracting types for package crypto/des.
+2025/05/05 11:34:41 Done extracting types for package crypto/des.
+2025/05/05 11:34:41 Processing package crypto/internal/edwards25519/field.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/edwards25519/field.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/edwards25519/field.
+2025/05/05 11:34:41 Processing package crypto/internal/nistec/fiat.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/nistec/fiat.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/nistec/fiat.
+2025/05/05 11:34:41 Processing package embed.
+2025/05/05 11:34:41 Extracting types for package embed.
+2025/05/05 11:34:41 Done extracting types for package embed.
+2025/05/05 11:34:41 Processing package crypto/internal/nistec.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/nistec.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/nistec.
+2025/05/05 11:34:41 Processing package crypto/ecdh.
+2025/05/05 11:34:41 Extracting types for package crypto/ecdh.
+2025/05/05 11:34:41 Done extracting types for package crypto/ecdh.
+2025/05/05 11:34:41 Processing package crypto/elliptic.
+2025/05/05 11:34:41 Extracting types for package crypto/elliptic.
+2025/05/05 11:34:41 Done extracting types for package crypto/elliptic.
+2025/05/05 11:34:41 Processing package crypto/internal/bigmod.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/bigmod.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/bigmod.
+2025/05/05 11:34:41 Processing package crypto/internal/boring/bbig.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/boring/bbig.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/boring/bbig.
+2025/05/05 11:34:41 Processing package crypto/sha512.
+2025/05/05 11:34:41 Extracting types for package crypto/sha512.
+2025/05/05 11:34:41 Done extracting types for package crypto/sha512.
+2025/05/05 11:34:41 Processing package encoding/asn1.
+2025/05/05 11:34:41 Extracting types for package encoding/asn1.
+2025/05/05 11:34:41 Done extracting types for package encoding/asn1.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/cryptobyte/asn1.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/cryptobyte/asn1.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/cryptobyte/asn1.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/cryptobyte.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/cryptobyte.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/cryptobyte.
+2025/05/05 11:34:41 Processing package crypto/ecdsa.
+2025/05/05 11:34:41 Extracting types for package crypto/ecdsa.
+2025/05/05 11:34:41 Done extracting types for package crypto/ecdsa.
+2025/05/05 11:34:41 Processing package crypto/internal/edwards25519.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/edwards25519.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/edwards25519.
+2025/05/05 11:34:41 Processing package crypto/ed25519.
+2025/05/05 11:34:41 Extracting types for package crypto/ed25519.
+2025/05/05 11:34:41 Done extracting types for package crypto/ed25519.
+2025/05/05 11:34:41 Processing package crypto/hmac.
+2025/05/05 11:34:41 Extracting types for package crypto/hmac.
+2025/05/05 11:34:41 Done extracting types for package crypto/hmac.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/internal/alias.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/internal/alias.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/internal/alias.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/chacha20.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/chacha20.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/chacha20.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/internal/poly1305.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/internal/poly1305.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/internal/poly1305.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/chacha20poly1305.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/chacha20poly1305.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/chacha20poly1305.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/hkdf.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/hkdf.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/hkdf.
+2025/05/05 11:34:41 Processing package crypto/internal/hpke.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/hpke.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/hpke.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/sys/cpu.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/sys/cpu.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/sys/cpu.
+2025/05/05 11:34:41 Processing package vendor/golang.org/x/crypto/sha3.
+2025/05/05 11:34:41 Extracting types for package vendor/golang.org/x/crypto/sha3.
+2025/05/05 11:34:41 Done extracting types for package vendor/golang.org/x/crypto/sha3.
+2025/05/05 11:34:41 Processing package crypto/internal/mlkem768.
+2025/05/05 11:34:41 Extracting types for package crypto/internal/mlkem768.
+2025/05/05 11:34:41 Done extracting types for package crypto/internal/mlkem768.
+2025/05/05 11:34:41 Processing package crypto/rc4.
+2025/05/05 11:34:41 Extracting types for package crypto/rc4.
+2025/05/05 11:34:41 Done extracting types for package crypto/rc4.
+2025/05/05 11:34:41 Processing package crypto/rsa.
+2025/05/05 11:34:41 Extracting types for package crypto/rsa.
+2025/05/05 11:34:41 Done extracting types for package crypto/rsa.
+2025/05/05 11:34:41 Processing package crypto/dsa.
+2025/05/05 11:34:41 Extracting types for package crypto/dsa.
+2025/05/05 11:34:41 Done extracting types for package crypto/dsa.
+2025/05/05 11:34:41 Processing package crypto/x509/internal/macos.
+2025/05/05 11:34:41 Extracting types for package crypto/x509/internal/macos.
+2025/05/05 11:34:41 Done extracting types for package crypto/x509/internal/macos.
+2025/05/05 11:34:41 Processing package crypto/x509/pkix.
+2025/05/05 11:34:41 Extracting types for package crypto/x509/pkix.
+2025/05/05 11:34:41 Done extracting types for package crypto/x509/pkix.
+2025/05/05 11:34:41 Processing package encoding/pem.
+2025/05/05 11:34:41 Extracting types for package encoding/pem.
+2025/05/05 11:34:41 Done extracting types for package encoding/pem.
+2025/05/05 11:34:41 Processing package net/url.
+2025/05/05 11:34:41 Extracting types for package net/url.
+2025/05/05 11:34:41 Done extracting types for package net/url.
+2025/05/05 11:34:41 Processing package crypto/x509.
+2025/05/05 11:34:41 Extracting types for package crypto/x509.
+2025/05/05 11:34:41 Done extracting types for package crypto/x509.
+2025/05/05 11:34:41 Processing package crypto/tls.
+2025/05/05 11:34:41 Extracting types for package crypto/tls.
+2025/05/05 11:34:42 Done extracting types for package crypto/tls.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/errors.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/errors.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/errors.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/runtime.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/runtime.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/runtime.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/decoder.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/decoder.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/decoder.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/encoder.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/encoder.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/encoder.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/encoder/vm_color_indent.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/encoder/vm_color_indent.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/encoder/vm_color_indent.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/encoder/vm_color.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/encoder/vm_color.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/encoder/vm_color.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/encoder/vm_indent.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/encoder/vm_indent.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/encoder/vm_indent.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json/internal/encoder/vm.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json/internal/encoder/vm.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json/internal/encoder/vm.
+2025/05/05 11:34:42 Processing package github.com/goccy/go-json.
+2025/05/05 11:34:42 Extracting types for package github.com/goccy/go-json.
+2025/05/05 11:34:42 Done extracting types for package github.com/goccy/go-json.
+2025/05/05 11:34:42 Processing package github.com/klauspost/compress/internal/race.
+2025/05/05 11:34:42 Extracting types for package github.com/klauspost/compress/internal/race.
+2025/05/05 11:34:42 Done extracting types for package github.com/klauspost/compress/internal/race.
+2025/05/05 11:34:42 Processing package github.com/klauspost/compress/s2.
+2025/05/05 11:34:42 Extracting types for package github.com/klauspost/compress/s2.
+2025/05/05 11:34:42 Done extracting types for package github.com/klauspost/compress/s2.
+2025/05/05 11:34:42 Processing package github.com/minio/md5-simd.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/md5-simd.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/md5-simd.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/s3utils.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/s3utils.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/s3utils.
+2025/05/05 11:34:42 Processing package compress/flate.
+2025/05/05 11:34:42 Extracting types for package compress/flate.
+2025/05/05 11:34:42 Done extracting types for package compress/flate.
+2025/05/05 11:34:42 Processing package compress/gzip.
+2025/05/05 11:34:42 Extracting types for package compress/gzip.
+2025/05/05 11:34:42 Done extracting types for package compress/gzip.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/text/transform.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/text/transform.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/text/transform.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/net/idna.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/net/idna.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/net/idna.
+2025/05/05 11:34:42 Processing package net/textproto.
+2025/05/05 11:34:42 Extracting types for package net/textproto.
+2025/05/05 11:34:42 Done extracting types for package net/textproto.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/net/http/httpproxy.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/net/http/httpproxy.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/net/http/httpproxy.
+2025/05/05 11:34:42 Processing package vendor/golang.org/x/net/http2/hpack.
+2025/05/05 11:34:42 Extracting types for package vendor/golang.org/x/net/http2/hpack.
+2025/05/05 11:34:42 Done extracting types for package vendor/golang.org/x/net/http2/hpack.
+2025/05/05 11:34:42 Processing package maps.
+2025/05/05 11:34:42 Extracting types for package maps.
+2025/05/05 11:34:42 Done extracting types for package maps.
+2025/05/05 11:34:42 Processing package mime.
+2025/05/05 11:34:42 Extracting types for package mime.
+2025/05/05 11:34:42 Done extracting types for package mime.
+2025/05/05 11:34:42 Processing package mime/quotedprintable.
+2025/05/05 11:34:42 Extracting types for package mime/quotedprintable.
+2025/05/05 11:34:42 Done extracting types for package mime/quotedprintable.
+2025/05/05 11:34:42 Processing package mime/multipart.
+2025/05/05 11:34:42 Extracting types for package mime/multipart.
+2025/05/05 11:34:42 Done extracting types for package mime/multipart.
+2025/05/05 11:34:42 Processing package net/http/httptrace.
+2025/05/05 11:34:42 Extracting types for package net/http/httptrace.
+2025/05/05 11:34:42 Done extracting types for package net/http/httptrace.
+2025/05/05 11:34:42 Processing package net/http/internal.
+2025/05/05 11:34:42 Extracting types for package net/http/internal.
+2025/05/05 11:34:42 Done extracting types for package net/http/internal.
+2025/05/05 11:34:42 Processing package net/http/internal/ascii.
+2025/05/05 11:34:42 Extracting types for package net/http/internal/ascii.
+2025/05/05 11:34:42 Done extracting types for package net/http/internal/ascii.
+2025/05/05 11:34:42 Processing package net/http.
+2025/05/05 11:34:42 Extracting types for package net/http.
+2025/05/05 11:34:42 Done extracting types for package net/http.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/signer.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/signer.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/signer.
+2025/05/05 11:34:42 Processing package gopkg.in/ini.v1.
+2025/05/05 11:34:42 Extracting types for package gopkg.in/ini.v1.
+2025/05/05 11:34:42 Done extracting types for package gopkg.in/ini.v1.
+2025/05/05 11:34:42 Processing package os/exec.
+2025/05/05 11:34:42 Extracting types for package os/exec.
+2025/05/05 11:34:42 Done extracting types for package os/exec.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/credentials.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/credentials.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/credentials.
+2025/05/05 11:34:42 Processing package golang.org/x/crypto/blake2b.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/crypto/blake2b.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/crypto/blake2b.
+2025/05/05 11:34:42 Processing package golang.org/x/crypto/argon2.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/crypto/argon2.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/crypto/argon2.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/encrypt.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/encrypt.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/encrypt.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/lifecycle.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/lifecycle.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/lifecycle.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/set.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/set.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/set.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/notification.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/notification.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/notification.
+2025/05/05 11:34:42 Processing package github.com/rs/xid.
+2025/05/05 11:34:42 Extracting types for package github.com/rs/xid.
+2025/05/05 11:34:42 Done extracting types for package github.com/rs/xid.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/replication.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/replication.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/replication.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/sse.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/sse.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/sse.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7/pkg/tags.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7/pkg/tags.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7/pkg/tags.
+2025/05/05 11:34:42 Processing package golang.org/x/text/transform.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/text/transform.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/text/transform.
+2025/05/05 11:34:42 Processing package golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Processing package golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Processing package golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Processing package golang.org/x/net/idna.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/net/idna.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/net/idna.
+2025/05/05 11:34:42 Processing package golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Processing package net/http/cookiejar.
+2025/05/05 11:34:42 Extracting types for package net/http/cookiejar.
+2025/05/05 11:34:42 Done extracting types for package net/http/cookiejar.
+2025/05/05 11:34:42 Processing package golang.org/x/net/publicsuffix.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/net/publicsuffix.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/net/publicsuffix.
+2025/05/05 11:34:42 Processing package net/http/httputil.
+2025/05/05 11:34:42 Extracting types for package net/http/httputil.
+2025/05/05 11:34:42 Done extracting types for package net/http/httputil.
+2025/05/05 11:34:42 Processing package github.com/minio/minio-go/v7.
+2025/05/05 11:34:42 Extracting types for package github.com/minio/minio-go/v7.
+2025/05/05 11:34:42 Done extracting types for package github.com/minio/minio-go/v7.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/common.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/common.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/common.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/artifactstore.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/artifactstore.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/artifactstore.
+2025/05/05 11:34:42 Processing package archive/zip.
+2025/05/05 11:34:42 Extracting types for package archive/zip.
+2025/05/05 11:34:42 Done extracting types for package archive/zip.
+2025/05/05 11:34:42 Processing package github.com/rabbitmq/amqp091-go.
+2025/05/05 11:34:42 Extracting types for package github.com/rabbitmq/amqp091-go.
+2025/05/05 11:34:42 Done extracting types for package github.com/rabbitmq/amqp091-go.
+2025/05/05 11:34:42 Processing package golang.org/x/exp/constraints.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/exp/constraints.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/exp/constraints.
+2025/05/05 11:34:42 Processing package golang.org/x/exp/slices.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/exp/slices.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/exp/slices.
+2025/05/05 11:34:42 Processing package golang.org/x/exp/slog/internal.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/exp/slog/internal.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/exp/slog/internal.
+2025/05/05 11:34:42 Processing package golang.org/x/exp/slog/internal/buffer.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/exp/slog/internal/buffer.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/exp/slog/internal/buffer.
+2025/05/05 11:34:42 Processing package golang.org/x/exp/slog.
+2025/05/05 11:34:42 Extracting types for package golang.org/x/exp/slog.
+2025/05/05 11:34:42 Done extracting types for package golang.org/x/exp/slog.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/queue.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/queue.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/queue.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/utils.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/utils.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/utils.
+2025/05/05 11:34:42 Processing package gopkg.in/yaml.v3.
+2025/05/05 11:34:42 Extracting types for package gopkg.in/yaml.v3.
+2025/05/05 11:34:42 Done extracting types for package gopkg.in/yaml.v3.
+2025/05/05 11:34:42 Processing package os/signal.
+2025/05/05 11:34:42 Extracting types for package os/signal.
+2025/05/05 11:34:42 Done extracting types for package os/signal.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/codeql.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/codeql.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/codeql.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/qldbstore.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/qldbstore.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/qldbstore.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/agent.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/agent.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/agent.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/deploy.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/deploy.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/deploy.
+2025/05/05 11:34:42 Processing package github.com/gorilla/mux.
+2025/05/05 11:34:42 Extracting types for package github.com/gorilla/mux.
+2025/05/05 11:34:42 Done extracting types for package github.com/gorilla/mux.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/state.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/state.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/state.
+2025/05/05 11:34:42 Processing package github.com/hohn/mrvacommander/pkg/server.
+2025/05/05 11:34:42 Extracting types for package github.com/hohn/mrvacommander/pkg/server.
+2025/05/05 11:34:42 Done extracting types for package github.com/hohn/mrvacommander/pkg/server.
+2025/05/05 11:34:42 Processing package mrvaserver.
+2025/05/05 11:34:42 Extracting types for package mrvaserver.
+2025/05/05 11:34:42 Done extracting types for package mrvaserver.
+2025/05/05 11:34:42 Done processing dependencies.
+2025/05/05 11:34:42 Starting to extract packages.
+2025/05/05 11:34:42 Skipping dependency package internal/goarch.
+2025/05/05 11:34:42 Skipping dependency package unsafe.
+2025/05/05 11:34:42 Skipping dependency package internal/abi.
+2025/05/05 11:34:42 Skipping dependency package internal/unsafeheader.
+2025/05/05 11:34:42 Skipping dependency package internal/cpu.
+2025/05/05 11:34:42 Skipping dependency package internal/bytealg.
+2025/05/05 11:34:42 Skipping dependency package internal/byteorder.
+2025/05/05 11:34:42 Skipping dependency package internal/chacha8rand.
+2025/05/05 11:34:42 Skipping dependency package internal/coverage/rtcov.
+2025/05/05 11:34:42 Skipping dependency package internal/godebugs.
+2025/05/05 11:34:42 Skipping dependency package internal/goexperiment.
+2025/05/05 11:34:42 Skipping dependency package internal/goos.
+2025/05/05 11:34:42 Skipping dependency package internal/profilerecord.
+2025/05/05 11:34:42 Skipping dependency package internal/runtime/atomic.
+2025/05/05 11:34:42 Skipping dependency package internal/runtime/exithook.
+2025/05/05 11:34:42 Skipping dependency package internal/stringslite.
+2025/05/05 11:34:42 Skipping dependency package runtime/internal/math.
+2025/05/05 11:34:42 Skipping dependency package runtime/internal/sys.
+2025/05/05 11:34:42 Skipping dependency package runtime.
+2025/05/05 11:34:42 Skipping dependency package internal/reflectlite.
+2025/05/05 11:34:42 Skipping dependency package errors.
+2025/05/05 11:34:42 Skipping dependency package internal/race.
+2025/05/05 11:34:42 Skipping dependency package sync/atomic.
+2025/05/05 11:34:42 Skipping dependency package sync.
+2025/05/05 11:34:42 Skipping dependency package internal/bisect.
+2025/05/05 11:34:42 Skipping dependency package internal/godebug.
+2025/05/05 11:34:42 Skipping dependency package internal/asan.
+2025/05/05 11:34:42 Skipping dependency package internal/itoa.
+2025/05/05 11:34:42 Skipping dependency package internal/msan.
+2025/05/05 11:34:42 Skipping dependency package internal/oserror.
+2025/05/05 11:34:42 Skipping dependency package syscall.
+2025/05/05 11:34:42 Skipping dependency package time.
+2025/05/05 11:34:42 Skipping dependency package context.
+2025/05/05 11:34:42 Skipping dependency package encoding.
+2025/05/05 11:34:42 Skipping dependency package cmp.
+2025/05/05 11:34:42 Skipping dependency package iter.
+2025/05/05 11:34:42 Skipping dependency package math/bits.
+2025/05/05 11:34:42 Skipping dependency package math.
+2025/05/05 11:34:42 Skipping dependency package unicode/utf8.
+2025/05/05 11:34:42 Skipping dependency package strconv.
+2025/05/05 11:34:42 Skipping dependency package unicode.
+2025/05/05 11:34:42 Skipping dependency package reflect.
+2025/05/05 11:34:42 Skipping dependency package slices.
+2025/05/05 11:34:42 Skipping dependency package internal/fmtsort.
+2025/05/05 11:34:42 Skipping dependency package io.
+2025/05/05 11:34:42 Skipping dependency package path.
+2025/05/05 11:34:42 Skipping dependency package io/fs.
+2025/05/05 11:34:42 Skipping dependency package internal/filepathlite.
+2025/05/05 11:34:42 Skipping dependency package internal/syscall/unix.
+2025/05/05 11:34:42 Skipping dependency package internal/poll.
+2025/05/05 11:34:42 Skipping dependency package internal/syscall/execenv.
+2025/05/05 11:34:42 Skipping dependency package internal/testlog.
+2025/05/05 11:34:42 Skipping dependency package os.
+2025/05/05 11:34:42 Skipping dependency package fmt.
+2025/05/05 11:34:42 Skipping dependency package strings.
+2025/05/05 11:34:42 Skipping dependency package flag.
+2025/05/05 11:34:42 Skipping dependency package bytes.
+2025/05/05 11:34:42 Skipping dependency package bufio.
+2025/05/05 11:34:42 Skipping dependency package encoding/binary.
+2025/05/05 11:34:42 Skipping dependency package encoding/base64.
+2025/05/05 11:34:42 Skipping dependency package unicode/utf16.
+2025/05/05 11:34:42 Skipping dependency package encoding/json.
+2025/05/05 11:34:42 Skipping dependency package github.com/BurntSushi/toml/internal.
+2025/05/05 11:34:42 Skipping dependency package sort.
+2025/05/05 11:34:42 Skipping dependency package github.com/BurntSushi/toml.
+2025/05/05 11:34:42 Skipping dependency package log/internal.
+2025/05/05 11:34:42 Skipping dependency package log.
+2025/05/05 11:34:42 Skipping dependency package log/slog/internal.
+2025/05/05 11:34:42 Skipping dependency package log/slog/internal/buffer.
+2025/05/05 11:34:42 Skipping dependency package log/slog.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/config/mcc.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo/types.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo/internal/registry.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo/providers/aix.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/net/dns/dnsmessage.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/net/route.
+2025/05/05 11:34:42 Skipping dependency package internal/nettrace.
+2025/05/05 11:34:42 Skipping dependency package internal/singleflight.
+2025/05/05 11:34:42 Skipping dependency package math/rand/v2.
+2025/05/05 11:34:42 Skipping dependency package internal/concurrent.
+2025/05/05 11:34:42 Skipping dependency package internal/weak.
+2025/05/05 11:34:42 Skipping dependency package unique.
+2025/05/05 11:34:42 Skipping dependency package net/netip.
+2025/05/05 11:34:42 Skipping dependency package net.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo/providers/shared.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/sys/unix.
+2025/05/05 11:34:42 Skipping dependency package encoding/hex.
+2025/05/05 11:34:42 Skipping dependency package encoding/xml.
+2025/05/05 11:34:42 Skipping dependency package hash.
+2025/05/05 11:34:42 Skipping dependency package hash/crc32.
+2025/05/05 11:34:42 Skipping dependency package io/ioutil.
+2025/05/05 11:34:42 Skipping dependency package howett.net/plist.
+2025/05/05 11:34:42 Skipping dependency package runtime/cgo.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo/providers/darwin.
+2025/05/05 11:34:42 Skipping dependency package path/filepath.
+2025/05/05 11:34:42 Skipping dependency package regexp/syntax.
+2025/05/05 11:34:42 Skipping dependency package regexp.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo/providers/linux.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo/providers/windows.
+2025/05/05 11:34:42 Skipping dependency package github.com/elastic/go-sysinfo.
+2025/05/05 11:34:42 Skipping dependency package crypto.
+2025/05/05 11:34:42 Skipping dependency package crypto/md5.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/alias.
+2025/05/05 11:34:42 Skipping dependency package crypto/subtle.
+2025/05/05 11:34:42 Skipping dependency package crypto/cipher.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/boring/sig.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/boring.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/randutil.
+2025/05/05 11:34:42 Skipping dependency package math/rand.
+2025/05/05 11:34:42 Skipping dependency package math/big.
+2025/05/05 11:34:42 Skipping dependency package crypto/rand.
+2025/05/05 11:34:42 Skipping dependency package crypto/sha1.
+2025/05/05 11:34:42 Skipping dependency package database/sql/driver.
+2025/05/05 11:34:42 Skipping dependency package github.com/google/uuid.
+2025/05/05 11:34:42 Skipping dependency package os/user.
+2025/05/05 11:34:42 Skipping dependency package archive/tar.
+2025/05/05 11:34:42 Skipping dependency package crypto/sha256.
+2025/05/05 11:34:42 Skipping dependency package container/list.
+2025/05/05 11:34:42 Skipping dependency package crypto/aes.
+2025/05/05 11:34:42 Skipping dependency package crypto/des.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/edwards25519/field.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/nistec/fiat.
+2025/05/05 11:34:42 Skipping dependency package embed.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/nistec.
+2025/05/05 11:34:42 Skipping dependency package crypto/ecdh.
+2025/05/05 11:34:42 Skipping dependency package crypto/elliptic.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/bigmod.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/boring/bbig.
+2025/05/05 11:34:42 Skipping dependency package crypto/sha512.
+2025/05/05 11:34:42 Skipping dependency package encoding/asn1.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/cryptobyte/asn1.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/cryptobyte.
+2025/05/05 11:34:42 Skipping dependency package crypto/ecdsa.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/edwards25519.
+2025/05/05 11:34:42 Skipping dependency package crypto/ed25519.
+2025/05/05 11:34:42 Skipping dependency package crypto/hmac.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/internal/alias.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/chacha20.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/internal/poly1305.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/chacha20poly1305.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/hkdf.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/hpke.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/sys/cpu.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/crypto/sha3.
+2025/05/05 11:34:42 Skipping dependency package crypto/internal/mlkem768.
+2025/05/05 11:34:42 Skipping dependency package crypto/rc4.
+2025/05/05 11:34:42 Skipping dependency package crypto/rsa.
+2025/05/05 11:34:42 Skipping dependency package crypto/dsa.
+2025/05/05 11:34:42 Skipping dependency package crypto/x509/internal/macos.
+2025/05/05 11:34:42 Skipping dependency package crypto/x509/pkix.
+2025/05/05 11:34:42 Skipping dependency package encoding/pem.
+2025/05/05 11:34:42 Skipping dependency package net/url.
+2025/05/05 11:34:42 Skipping dependency package crypto/x509.
+2025/05/05 11:34:42 Skipping dependency package crypto/tls.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/errors.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/runtime.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/decoder.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/encoder.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/encoder/vm_color_indent.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/encoder/vm_color.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/encoder/vm_indent.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json/internal/encoder/vm.
+2025/05/05 11:34:42 Skipping dependency package github.com/goccy/go-json.
+2025/05/05 11:34:42 Skipping dependency package github.com/klauspost/compress/internal/race.
+2025/05/05 11:34:42 Skipping dependency package github.com/klauspost/compress/s2.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/md5-simd.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/s3utils.
+2025/05/05 11:34:42 Skipping dependency package compress/flate.
+2025/05/05 11:34:42 Skipping dependency package compress/gzip.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/text/transform.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/net/idna.
+2025/05/05 11:34:42 Skipping dependency package net/textproto.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/net/http/httpproxy.
+2025/05/05 11:34:42 Skipping dependency package vendor/golang.org/x/net/http2/hpack.
+2025/05/05 11:34:42 Skipping dependency package maps.
+2025/05/05 11:34:42 Skipping dependency package mime.
+2025/05/05 11:34:42 Skipping dependency package mime/quotedprintable.
+2025/05/05 11:34:42 Skipping dependency package mime/multipart.
+2025/05/05 11:34:42 Skipping dependency package net/http/httptrace.
+2025/05/05 11:34:42 Skipping dependency package net/http/internal.
+2025/05/05 11:34:42 Skipping dependency package net/http/internal/ascii.
+2025/05/05 11:34:42 Skipping dependency package net/http.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/signer.
+2025/05/05 11:34:42 Skipping dependency package gopkg.in/ini.v1.
+2025/05/05 11:34:42 Skipping dependency package os/exec.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/credentials.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/crypto/blake2b.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/crypto/argon2.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/encrypt.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/lifecycle.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/set.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/notification.
+2025/05/05 11:34:42 Skipping dependency package github.com/rs/xid.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/replication.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/sse.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7/pkg/tags.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/text/transform.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/text/unicode/bidi.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/text/secure/bidirule.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/text/unicode/norm.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/net/idna.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/net/http/httpguts.
+2025/05/05 11:34:42 Skipping dependency package net/http/cookiejar.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/net/publicsuffix.
+2025/05/05 11:34:42 Skipping dependency package net/http/httputil.
+2025/05/05 11:34:42 Skipping dependency package github.com/minio/minio-go/v7.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/common.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/artifactstore.
+2025/05/05 11:34:42 Skipping dependency package archive/zip.
+2025/05/05 11:34:42 Skipping dependency package github.com/rabbitmq/amqp091-go.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/exp/constraints.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/exp/slices.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/exp/slog/internal.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/exp/slog/internal/buffer.
+2025/05/05 11:34:42 Skipping dependency package golang.org/x/exp/slog.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/queue.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/utils.
+2025/05/05 11:34:42 Skipping dependency package gopkg.in/yaml.v3.
+2025/05/05 11:34:42 Skipping dependency package os/signal.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/codeql.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/qldbstore.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/agent.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/deploy.
+2025/05/05 11:34:42 Skipping dependency package github.com/gorilla/mux.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/state.
+2025/05/05 11:34:42 Skipping dependency package github.com/hohn/mrvacommander/pkg/server.
+2025/05/05 11:34:42 Extracting /Users/hohn/work-gh/mrva/mrvaserver/go.mod
+2025/05/05 11:34:42 Extracting /Users/hohn/work-gh/mrva/mrvaserver/main.go
+2025/05/05 11:34:42 Done extracting /Users/hohn/work-gh/mrva/mrvaserver/go.mod (3ms)
+2025/05/05 11:34:42 Done extracting /Users/hohn/work-gh/mrva/mrvaserver/main.go (20ms)
+2025/05/05 11:34:42 Done extracting packages.
+[T 18:34:42 28749] Extractor /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/osx64/go-extractor terminated with exit code 0.
+[T 18:34:42 29480] Initializing tracer.
+[T 18:34:42 29480] Initializing tags.
+[T 18:34:42 29480] ID set to 0000000000007328_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29480] ==== Candidate to intercept: /opt/homebrew/bin/git (canonical: /opt/homebrew/Cellar/git/2.44.0/bin/git) ====
+[T 18:34:42 29480] Executing the following tracer actions:
+[T 18:34:42 29480] Tracer actions:
+[T 18:34:42 29480] pre_invocations(0)
+[T 18:34:42 29480] post_invocations(0)
+[T 18:34:42 29480] trace_languages(1): [go]
+[T 18:34:42 29492] Initializing tracer.
+[T 18:34:42 29492] Initializing tags.
+[T 18:34:42 29492] ID set to 0000000000007334_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29492] ==== Candidate to intercept: /opt/homebrew/bin/git (canonical: /opt/homebrew/Cellar/git/2.44.0/bin/git) ====
+[T 18:34:42 29492] Executing the following tracer actions:
+[T 18:34:42 29492] Tracer actions:
+[T 18:34:42 29492] pre_invocations(0)
+[T 18:34:42 29492] post_invocations(0)
+[T 18:34:42 29492] trace_languages(1): [go]
+[T 18:34:42 29514] Initializing tracer.
+[T 18:34:42 29509] Initializing tracer.
+[T 18:34:42 29508] Initializing tracer.
+[T 18:34:42 29510] Initializing tracer.
+[T 18:34:42 29511] Initializing tracer.
+[T 18:34:42 29512] Initializing tracer.
+[T 18:34:42 29516] Initializing tracer.
+[T 18:34:42 29515] Initializing tracer.
+[T 18:34:42 29507] Initializing tracer.
+[T 18:34:42 29517] Initializing tracer.
+[T 18:34:42 29513] Initializing tracer.
+[T 18:34:42 29514] Initializing tags.
+[T 18:34:42 29509] Initializing tags.
+[T 18:34:42 29509] ID set to 0000000000007345_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29509] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29514] ID set to 000000000000734A_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29514] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29509] Executing the following tracer actions:
+[T 18:34:42 29514] Executing the following tracer actions:
+[T 18:34:42 29509] Tracer actions:
+[T 18:34:42 29509] pre_invocations(0)
+[T 18:34:42 29509] post_invocations(0)
+[T 18:34:42 29509] trace_languages(1): [go]
+[T 18:34:42 29514] Tracer actions:
+[T 18:34:42 29514] pre_invocations(0)
+[T 18:34:42 29514] post_invocations(0)
+[T 18:34:42 29514] trace_languages(1): [go]
+[T 18:34:42 29508] Initializing tags.
+[T 18:34:42 29516] Initializing tags.
+[T 18:34:42 29507] Initializing tags.
+[T 18:34:42 29510] Initializing tags.
+[T 18:34:42 29520] Initializing tracer.
+[T 18:34:42 29517] Initializing tags.
+[T 18:34:42 29512] Initializing tags.
+[T 18:34:42 29513] Initializing tags.
+[T 18:34:42 29511] Initializing tags.
+[T 18:34:42 29515] Initializing tags.
+[T 18:34:42 29521] Initializing tracer.
+[T 18:34:42 29518] Initializing tracer.
+[T 18:34:42 29519] Initializing tracer.
+[T 18:34:42 29522] Initializing tracer.
+[T 18:34:42 29508] ID set to 0000000000007344_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29520] Initializing tags.
+[T 18:34:42 29515] ID set to 000000000000734B_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29516] ID set to 000000000000734C_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29515] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29516] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29511] ID set to 0000000000007347_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29511] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29516] Executing the following tracer actions:
+[T 18:34:42 29516] Tracer actions:
+[T 18:34:42 29511] Executing the following tracer actions:
+[T 18:34:42 29516] pre_invocations(0)
+[T 18:34:42 29516] post_invocations(0)
+[T 18:34:42 29516] trace_languages(1): [go]
+[T 18:34:42 29511] Tracer actions:
+[T 18:34:42 29511] pre_invocations(0)
+[T 18:34:42 29511] post_invocations(0)
+[T 18:34:42 29511] trace_languages(1): [go]
+[T 18:34:42 29518] Initializing tags.
+[T 18:34:42 29521] Initializing tags.
+[T 18:34:42 29519] Initializing tags.
+[T 18:34:42 29522] Initializing tags.
+[T 18:34:42 29541] Initializing tracer.
+[T 18:34:42 29540] Initializing tracer.
+[T 18:34:42 29526] Initializing tracer.
+[T 18:34:42 29508] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29541] Initializing tags.
+[T 18:34:42 29540] Initializing tags.
+[T 18:34:42 29508] Executing the following tracer actions:
+[T 18:34:42 29508] Tracer actions:
+[T 18:34:42 29508] pre_invocations(0)
+[T 18:34:42 29508] post_invocations(0)
+[T 18:34:42 29508] trace_languages(1): [go]
+[T 18:34:42 29515] Executing the following tracer actions:
+[T 18:34:42 29515] Tracer actions:
+[T 18:34:42 29515] pre_invocations(0)
+[T 18:34:42 29515] post_invocations(0)
+[T 18:34:42 29515] trace_languages(1): [go]
+[T 18:34:42 29507] ID set to 0000000000007343_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29518] ID set to 000000000000734E_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29507] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29521] ID set to 0000000000007351_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29517] ID set to 000000000000734D_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29521] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29534] Initializing tracer.
+[T 18:34:42 29534] Initializing tags.
+[T 18:34:42 29526] Initializing tags.
+[T 18:34:42 29518] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29518] Executing the following tracer actions:
+[T 18:34:42 29507] Executing the following tracer actions:
+[T 18:34:42 29518] Tracer actions:
+[T 18:34:42 29518] pre_invocations(0)
+[T 18:34:42 29518] post_invocations(0)
+[T 18:34:42 29518] trace_languages(1): [go]
+[T 18:34:42 29517] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29517] Executing the following tracer actions:
+[T 18:34:42 29517] Tracer actions:
+[T 18:34:42 29517] pre_invocations(0)
+[T 18:34:42 29517] post_invocations(0)
+[T 18:34:42 29517] trace_languages(1): [go]
+[T 18:34:42 29520] ID set to 0000000000007350_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29534] ID set to 000000000000735E_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29521] Executing the following tracer actions:
+[T 18:34:42 29534] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:42 29540] ID set to 0000000000007364_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29507] Tracer actions:
+[T 18:34:42 29507] pre_invocations(0)
+[T 18:34:42 29507] post_invocations(0)
+[T 18:34:42 29507] trace_languages(1): [go]
+[T 18:34:42 29526] ID set to 0000000000007356_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29540] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:42 29534] Executing the following tracer actions:
+[T 18:34:42 29534] Tracer actions:
+[T 18:34:42 29540] Executing the following tracer actions:
+[T 18:34:42 29526] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:42 29534] pre_invocations(0)
+[T 18:34:42 29534] post_invocations(0)
+[T 18:34:42 29534] trace_languages(1): [go]
+[T 18:34:42 29510] ID set to 0000000000007346_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29520] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29540] Tracer actions:
+[T 18:34:42 29540] pre_invocations(0)
+[T 18:34:42 29540] post_invocations(0)
+[T 18:34:42 29540] trace_languages(1): [go]
+[T 18:34:42 29522] ID set to 0000000000007352_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29521] Tracer actions:
+[T 18:34:42 29521] pre_invocations(0)
+[T 18:34:42 29521] post_invocations(0)
+[T 18:34:42 29521] trace_languages(1): [go]
+[T 18:34:42 29520] Executing the following tracer actions:
+[T 18:34:42 29512] ID set to 0000000000007348_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29526] Executing the following tracer actions:
+[T 18:34:42 29510] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29520] Tracer actions:
+[T 18:34:42 29520] pre_invocations(0)
+[T 18:34:42 29520] post_invocations(0)
+[T 18:34:42 29520] trace_languages(1): [go]
+[T 18:34:42 29519] ID set to 000000000000734F_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29522] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29510] Executing the following tracer actions:
+[T 18:34:42 29512] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29513] ID set to 0000000000007349_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29510] Tracer actions:
+[T 18:34:42 29510] pre_invocations(0)
+[T 18:34:42 29510] post_invocations(0)
+[T 18:34:42 29522] Executing the following tracer actions:
+[T 18:34:42 29510] trace_languages(1): [go]
+[T 18:34:42 29526] Tracer actions:
+[T 18:34:42 29526] pre_invocations(0)
+[T 18:34:42 29526] post_invocations(0)
+[T 18:34:42 29526] trace_languages(1): [go]
+[T 18:34:42 29541] ID set to 0000000000007365_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:42 29522] Tracer actions:
+[T 18:34:42 29522] pre_invocations(0)
+[T 18:34:42 29522] post_invocations(0)
+[T 18:34:42 29522] trace_languages(1): [go]
+[T 18:34:42 29519] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29541] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/asm) ====
+[T 18:34:42 29513] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:42 29512] Executing the following tracer actions:
+[T 18:34:42 29541] Executing the following tracer actions:
+[T 18:34:42 29519] Executing the following tracer actions:
+[T 18:34:42 29541] Tracer actions:
+[T 18:34:42 29541] pre_invocations(0)
+[T 18:34:42 29541] post_invocations(0)
+[T 18:34:42 29541] trace_languages(1): [go]
+[T 18:34:42 29512] Tracer actions:
+[T 18:34:42 29513] Executing the following tracer actions:
+[T 18:34:42 29512] pre_invocations(0)
+[T 18:34:42 29512] post_invocations(0)
+[T 18:34:42 29512] trace_languages(1): [go]
+[T 18:34:42 29519] Tracer actions:
+[T 18:34:42 29519] pre_invocations(0)
+[T 18:34:42 29519] post_invocations(0)
+[T 18:34:42 29519] trace_languages(1): [go]
+[T 18:34:42 29513] Tracer actions:
+[T 18:34:42 29513] pre_invocations(0)
+[T 18:34:42 29513] post_invocations(0)
+[T 18:34:42 29513] trace_languages(1): [go]
+[T 18:34:42 29624] Initializing tracer.
+[T 18:34:43 29624] Initializing tags.
+[T 18:34:43 29624] ID set to 00000000000073B8_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29624] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/cgo (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/cgo) ====
+[T 18:34:43 29624] Executing the following tracer actions:
+[T 18:34:43 29624] Tracer actions:
+[T 18:34:43 29624] pre_invocations(0)
+[T 18:34:43 29624] post_invocations(0)
+[T 18:34:43 29624] trace_languages(1): [go]
+[T 18:34:43 29631] Initializing tracer.
+[T 18:34:43 29631] Initializing tags.
+[T 18:34:43 29631] ID set to 00000000000073BF_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29631] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:43 29631] Executing the following tracer actions:
+[T 18:34:43 29631] Tracer actions:
+[T 18:34:43 29631] pre_invocations(0)
+[T 18:34:43 29631] post_invocations(0)
+[T 18:34:43 29631] trace_languages(1): [go]
+[T 18:34:43 29642] Initializing tracer.
+[T 18:34:43 29644] Initializing tracer.
+[T 18:34:43 29642] Initializing tags.
+[T 18:34:43 29644] Initializing tags.
+[T 18:34:43 29642] ID set to 00000000000073CA_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29642] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:43 29644] ID set to 00000000000073CC_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29644] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:43 29642] Executing the following tracer actions:
+[T 18:34:43 29642] Tracer actions:
+[T 18:34:43 29642] pre_invocations(0)
+[T 18:34:43 29642] post_invocations(0)
+[T 18:34:43 29642] trace_languages(1): [go]
+[T 18:34:43 29644] Executing the following tracer actions:
+[T 18:34:43 29644] Tracer actions:
+[T 18:34:43 29644] pre_invocations(0)
+[T 18:34:43 29644] post_invocations(0)
+[T 18:34:43 29644] trace_languages(1): [go]
+[T 18:34:43 29631] Initializing tracer.
+[T 18:34:43 29631] Initializing tags.
+[T 18:34:43 29631] ID set to 00000000000073BF_0000000000000002 (parent 00000000000073BF_0000000000000001)
+[T 18:34:43 29631] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:43 29631] Executing the following tracer actions:
+[T 18:34:43 29631] Tracer actions:
+[T 18:34:43 29631] pre_invocations(0)
+[T 18:34:43 29631] post_invocations(0)
+[T 18:34:43 29631] trace_languages(1): [go]
+[T 18:34:43 29646] Initializing tracer.
+[T 18:34:43 29646] Initializing tags.
+[T 18:34:43 29646] ID set to 00000000000073CE_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29646] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:43 29646] Executing the following tracer actions:
+[T 18:34:43 29646] Tracer actions:
+[T 18:34:43 29646] pre_invocations(0)
+[T 18:34:43 29646] post_invocations(0)
+[T 18:34:43 29646] trace_languages(1): [go]
+[T 18:34:43 29647] Initializing tracer.
+[T 18:34:43 29647] Initializing tags.
+[T 18:34:43 29647] ID set to 00000000000073CF_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29647] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/compile) ====
+[T 18:34:43 29647] Executing the following tracer actions:
+[T 18:34:43 29647] Tracer actions:
+[T 18:34:43 29647] pre_invocations(0)
+[T 18:34:43 29647] post_invocations(0)
+[T 18:34:43 29647] trace_languages(1): [go]
+[T 18:34:43 29648] Initializing tracer.
+[T 18:34:43 29648] Initializing tags.
+[T 18:34:43 29648] ID set to 00000000000073D0_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29648] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link) ====
+[T 18:34:43 29648] Executing the following tracer actions:
+[T 18:34:43 29648] Tracer actions:
+[T 18:34:43 29648] pre_invocations(0)
+[T 18:34:43 29648] post_invocations(0)
+[T 18:34:43 29648] trace_languages(1): [go]
+[T 18:34:43 29649] Initializing tracer.
+[T 18:34:43 29649] Initializing tags.
+[T 18:34:43 29649] ID set to 00000000000073D1_0000000000000001 (parent 000000000000704D_0000000000000003)
+[T 18:34:43 29649] ==== Candidate to intercept: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link (canonical: /opt/homebrew/Cellar/go/1.23.0/libexec/pkg/tool/darwin_arm64/link) ====
+[T 18:34:43 29649] Executing the following tracer actions:
+[T 18:34:43 29649] Tracer actions:
+[T 18:34:43 29649] pre_invocations(0)
+[T 18:34:43 29649] post_invocations(0)
+[T 18:34:43 29649] trace_languages(1): [go]
+[T 18:34:43 29670] Initializing tracer.
+[T 18:34:43 29670] Initializing tags.
+[T 18:34:43 29670] ID set to 00000000000073E6_0000000000000001 (parent 00000000000073D1_0000000000000001)
+[T 18:34:43 29670] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:43 29670] Executing the following tracer actions:
+[T 18:34:43 29670] Tracer actions:
+[T 18:34:43 29670] pre_invocations(0)
+[T 18:34:43 29670] post_invocations(0)
+[T 18:34:43 29670] trace_languages(1): [go]
+[T 18:34:43 29670] Initializing tracer.
+[T 18:34:43 29670] Initializing tags.
+[T 18:34:43 29670] ID set to 00000000000073E6_0000000000000002 (parent 00000000000073E6_0000000000000001)
+[T 18:34:43 29670] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:43 29670] Executing the following tracer actions:
+[T 18:34:43 29670] Tracer actions:
+[T 18:34:43 29670] pre_invocations(0)
+[T 18:34:43 29670] post_invocations(0)
+[T 18:34:43 29670] trace_languages(1): [go]
+[T 18:34:43 29671] Initializing tracer.
+[T 18:34:43 29671] Initializing tags.
+[T 18:34:43 29671] ID set to 00000000000073E7_0000000000000001 (parent 00000000000073E6_0000000000000002)
+[T 18:34:43 29671] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:43 29671] Executing the following tracer actions:
+[T 18:34:43 29671] Tracer actions:
+[T 18:34:44 29671] pre_invocations(0)
+[T 18:34:44 29671] post_invocations(0)
+[T 18:34:44 29671] trace_languages(1): [go]
+[T 18:34:44 29673] Attempting to switch stdout/stderr to 3...
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/ld.semmle.000073E6.0320C418.slice.x86_64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/ld.semmle.000073E6.0320C418.slice.x86_64: replacing existing signature
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/ld.semmle.000073E6.0320C418.slice.arm64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/ld.semmle.000073E6.0320C418.slice.arm64: replacing existing signature
+[T 18:34:48 29679] Initializing tracer.
+[T 18:34:48 29679] Initializing tags.
+[T 18:34:48 29679] ID set to 00000000000073EF_0000000000000001 (parent 00000000000073E6_0000000000000002)
+[T 18:34:48 29679] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/ld (canonical: /Library/Developer/CommandLineTools/usr/bin/ld) ====
+[T 18:34:48 29679] Executing the following tracer actions:
+[T 18:34:48 29679] Tracer actions:
+[T 18:34:48 29679] pre_invocations(0)
+[T 18:34:48 29679] post_invocations(0)
+[T 18:34:48 29679] trace_languages(1): [go]
+[T 18:34:48 29727] Initializing tracer.
+[T 18:34:48 29727] Initializing tags.
+[T 18:34:48 29727] ID set to 000000000000741F_0000000000000001 (parent 00000000000073D1_0000000000000001)
+[T 18:34:48 29727] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:48 29727] Executing the following tracer actions:
+[T 18:34:48 29727] Tracer actions:
+[T 18:34:48 29727] pre_invocations(0)
+[T 18:34:48 29727] post_invocations(0)
+[T 18:34:48 29727] trace_languages(1): [go]
+[T 18:34:48 29727] Initializing tracer.
+[T 18:34:48 29727] Initializing tags.
+[T 18:34:48 29727] ID set to 000000000000741F_0000000000000002 (parent 000000000000741F_0000000000000001)
+[T 18:34:48 29727] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:48 29727] Executing the following tracer actions:
+[T 18:34:48 29727] Tracer actions:
+[T 18:34:48 29727] pre_invocations(0)
+[T 18:34:48 29727] post_invocations(0)
+[T 18:34:48 29727] trace_languages(1): [go]
+[T 18:34:48 29728] Initializing tracer.
+[T 18:34:48 29728] Initializing tags.
+[T 18:34:48 29728] ID set to 0000000000007420_0000000000000001 (parent 000000000000741F_0000000000000002)
+[T 18:34:48 29728] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:48 29728] Executing the following tracer actions:
+[T 18:34:48 29728] Tracer actions:
+[T 18:34:48 29728] pre_invocations(0)
+[T 18:34:48 29728] post_invocations(0)
+[T 18:34:48 29728] trace_languages(1): [go]
+[T 18:34:48 29729] Initializing tracer.
+[T 18:34:48 29729] Initializing tags.
+[T 18:34:48 29729] ID set to 0000000000007421_0000000000000001 (parent 000000000000741F_0000000000000002)
+[T 18:34:48 29729] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/ld (canonical: /Library/Developer/CommandLineTools/usr/bin/ld) ====
+[T 18:34:48 29729] Executing the following tracer actions:
+[T 18:34:48 29729] Tracer actions:
+[T 18:34:48 29729] pre_invocations(0)
+[T 18:34:48 29729] post_invocations(0)
+[T 18:34:48 29729] trace_languages(1): [go]
+[T 18:34:48 29730] Initializing tracer.
+[T 18:34:48 29730] Initializing tags.
+[T 18:34:48 29730] ID set to 0000000000007422_0000000000000001 (parent 00000000000073D1_0000000000000001)
+[T 18:34:48 29730] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:48 29730] Executing the following tracer actions:
+[T 18:34:48 29730] Tracer actions:
+[T 18:34:48 29730] pre_invocations(0)
+[T 18:34:48 29730] post_invocations(0)
+[T 18:34:48 29730] trace_languages(1): [go]
+[T 18:34:48 29730] Initializing tracer.
+[T 18:34:49 29730] Initializing tags.
+[T 18:34:49 29730] ID set to 0000000000007422_0000000000000002 (parent 0000000000007422_0000000000000001)
+[T 18:34:49 29730] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:49 29730] Executing the following tracer actions:
+[T 18:34:49 29730] Tracer actions:
+[T 18:34:49 29730] pre_invocations(0)
+[T 18:34:49 29730] post_invocations(0)
+[T 18:34:49 29730] trace_languages(1): [go]
+[T 18:34:49 29731] Initializing tracer.
+[T 18:34:49 29731] Initializing tags.
+[T 18:34:49 29731] ID set to 0000000000007423_0000000000000001 (parent 0000000000007422_0000000000000002)
+[T 18:34:49 29731] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/ld (canonical: /Library/Developer/CommandLineTools/usr/bin/ld) ====
+[T 18:34:49 29731] Executing the following tracer actions:
+[T 18:34:49 29731] Tracer actions:
+[T 18:34:49 29731] pre_invocations(0)
+[T 18:34:49 29731] post_invocations(0)
+[T 18:34:49 29731] trace_languages(1): [go]
+[T 18:34:49 29732] Initializing tracer.
+[T 18:34:49 29732] Initializing tags.
+[T 18:34:49 29732] ID set to 0000000000007424_0000000000000001 (parent 00000000000073D1_0000000000000001)
+[T 18:34:49 29732] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:49 29732] Executing the following tracer actions:
+[T 18:34:49 29732] Tracer actions:
+[T 18:34:49 29732] pre_invocations(0)
+[T 18:34:49 29732] post_invocations(0)
+[T 18:34:49 29732] trace_languages(1): [go]
+[T 18:34:49 29732] Initializing tracer.
+[T 18:34:49 29732] Initializing tags.
+[T 18:34:49 29732] ID set to 0000000000007424_0000000000000002 (parent 0000000000007424_0000000000000001)
+[T 18:34:49 29732] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:49 29732] Executing the following tracer actions:
+[T 18:34:49 29732] Tracer actions:
+[T 18:34:49 29732] pre_invocations(0)
+[T 18:34:49 29732] post_invocations(0)
+[T 18:34:49 29732] trace_languages(1): [go]
+[T 18:34:49 29733] Initializing tracer.
+[T 18:34:49 29733] Initializing tags.
+[T 18:34:49 29733] ID set to 0000000000007425_0000000000000001 (parent 00000000000073D1_0000000000000001)
+[T 18:34:49 29733] ==== Candidate to intercept: /usr/bin/cc (canonical: /usr/bin/cc) ====
+[T 18:34:49 29733] Executing the following tracer actions:
+[T 18:34:49 29733] Tracer actions:
+[T 18:34:49 29733] pre_invocations(0)
+[T 18:34:49 29733] post_invocations(0)
+[T 18:34:49 29733] trace_languages(1): [go]
+[T 18:34:49 29733] Initializing tracer.
+[T 18:34:49 29733] Initializing tags.
+[T 18:34:49 29733] ID set to 0000000000007425_0000000000000002 (parent 0000000000007425_0000000000000001)
+[T 18:34:49 29733] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/clang (canonical: /Library/Developer/CommandLineTools/usr/bin/clang) ====
+[T 18:34:49 29733] Executing the following tracer actions:
+[T 18:34:49 29733] Tracer actions:
+[T 18:34:49 29733] pre_invocations(0)
+[T 18:34:49 29733] post_invocations(0)
+[T 18:34:49 29733] trace_languages(1): [go]
+[T 18:34:49 29735] Attempting to switch stdout/stderr to 5...
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/dsymutil.semmle.00007426.1D163E48.slice.x86_64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/dsymutil.semmle.00007426.1D163E48.slice.x86_64: replacing existing signature
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/dsymutil.semmle.00007426.1D163E48.slice.arm64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/dsymutil.semmle.00007426.1D163E48.slice.arm64: replacing existing signature
+[T 18:34:51 29734] Initializing tracer.
+[T 18:34:51 29734] Initializing tags.
+[T 18:34:51 29734] ID set to 0000000000007426_0000000000000001 (parent 00000000000073D1_0000000000000001)
+[T 18:34:51 29734] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/dsymutil (canonical: /Library/Developer/CommandLineTools/usr/bin/dsymutil) ====
+[T 18:34:51 29734] Executing the following tracer actions:
+[T 18:34:51 29734] Tracer actions:
+[T 18:34:51 29734] pre_invocations(0)
+[T 18:34:51 29734] post_invocations(0)
+[T 18:34:51 29734] trace_languages(1): [go]
+[T 18:34:51 29827] Attempting to switch stdout/stderr to 5...
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/strip.semmle.00007482.3AB4CB18.slice.x86_64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/strip.semmle.00007482.3AB4CB18.slice.x86_64: replacing existing signature
+/Library/Developer/CommandLineTools/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/strip.semmle.00007482.3AB4CB18.slice.arm64
+/Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/working/copy-root/000001F5/Library/Developer/CommandLineTools/usr/bin/strip.semmle.00007482.3AB4CB18.slice.arm64: replacing existing signature
+[T 18:34:52 29826] Initializing tracer.
+[T 18:34:52 29826] Initializing tags.
+[T 18:34:52 29826] ID set to 0000000000007482_0000000000000001 (parent 00000000000073D1_0000000000000001)
+[T 18:34:52 29826] ==== Candidate to intercept: /Library/Developer/CommandLineTools/usr/bin/strip (canonical: /Library/Developer/CommandLineTools/usr/bin/strip) ====
+[T 18:34:52 29826] Executing the following tracer actions:
+[T 18:34:52 29826] Tracer actions:
+[T 18:34:52 29826] pre_invocations(0)
+[T 18:34:52 29826] post_invocations(0)
+[T 18:34:52 29826] trace_languages(1): [go]

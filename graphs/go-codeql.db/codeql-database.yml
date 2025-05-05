@@ -1,0 +1,11 @@
+---
+sourceLocationPrefix: /Users/hohn/work-gh/mrva/mrvaserver
+baselineLinesOfCode: 118
+unicodeNewlines: false
+columnKind: utf8
+primaryLanguage: go
+creationMetadata:
+  sha: 1b3ca2e9dab1e37fe5c3cf3621328f19c228afe9
+  cliVersion: 2.21.0
+  creationTime: 2025-05-05T18:34:21.181861Z
+finalised: true

@@ -1,0 +1,6 @@
+---
+library: false
+name: graphs
+version: 0.0.1
+dependencies:
+  codeql/go-all: 4.2.4

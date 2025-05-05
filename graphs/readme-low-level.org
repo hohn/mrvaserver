@@ -1,0 +1,197 @@
+#+HTML_HEAD_EXTRA: <style> .scrollable-svg { max-height: 800px; overflow-y: auto; display: block; } </style>
+
+* step
+  #+BEGIN_SRC sh 
+    # Create db
+    DB=go-codeql.db
+    SRCDIR=~/work-gh/mrva/mrvaserver
+    codeql database create --language=go            \
+           -s $SRCDIR                               \
+           -j 8 -v                                  \
+           $DB                                      \
+           --command="go build"
+
+
+  #+END_SRC
+
+* CodeQL AST in dot and pdf
+  The control flow graph is narrowed to the function of interest,
+  #+BEGIN_SRC c++
+    int copy_mem(unsigned int unused, dyn_input_t *input,
+                 unsigned int input_types) {...}
+
+  #+END_SRC
+  from [[./tests-common/test_part1.c]], so we do the same for the AST.
+
+  #+BEGIN_SRC sh 
+    # Produce ast in dot format
+    codeql database analyze                             \
+           --format=dot --output=ast.dot                \
+           -j8 -v --ram=16000                           \
+           --rerun                                      \
+           --                                           \
+           cpp-dataflow-part1-database                  \
+           graphs/ast.ql                            
+
+    # Convert dot to pdf
+    dot -Tpdf < ast.dot/cpp/print-ast.dot > ast.dot/cpp/print-ast.pdf
+    dot -Tsvg < ast.dot/cpp/print-ast.dot > ast.dot/cpp/print-ast.svg
+
+    # View the graph
+    open ast.dot/cpp/print-ast.pdf
+
+    # This comes from
+    tests-common/test_part1.c
+  #+END_SRC
+
+* CodeQL CFG in dot and pdf
+  The whole control flow graph is very large, so the query narrows it to the
+  function of interest,
+  #+BEGIN_SRC c++
+    int copy_mem(unsigned int unused, dyn_input_t *input,
+                 unsigned int input_types) {...}
+
+  #+END_SRC
+  from [[./tests-common/test_part1.c]]
+
+  #+BEGIN_SRC sh 
+    # Produce CFG in dot format
+    codeql database analyze                             \
+           --format=dot --output=cfg.dot                \
+           -j8 -v --ram=16000                           \
+           --rerun                                      \
+           --                                           \
+           cpp-dataflow-part1-database                  \
+           graphs/cfg.ql                            
+
+
+    # Convert dot to pdf
+    dot -Tpdf < cfg.dot/cpp/print-cfg.dot > cfg.dot/cpp/print-cfg.pdf
+    dot -Tsvg < cfg.dot/cpp/print-cfg.dot > cfg.dot/cpp/print-cfg.svg
+
+    # View the graph
+    open cfg.dot/cpp/print-cfg.pdf
+  #+END_SRC
+
+* AST
+  The ast is inlined here.  For better viewing, open the
+  pdf ([[./ast.dot/cpp/print-ast.pdf]]) separately.
+  #+ATTR_HTML: :width 100%
+  [[./ast.dot/cpp/print-ast.svg]]
+
+* CFG
+  The cfg is inlined here.  For better viewing, open the
+  pdf ([[./cfg.dot/cpp/print-cfg.pdf]]) separately.
+
+  #+ATTR_HTML: :class scrollable-svg
+  [[./cfg.dot/cpp/print-cfg.svg]]
+
+* GPTs
+  A gpt was used to add 17 of the CFG edges to the AST tree; more resulted in a
+  very confusing graph.  The hybrid is in =cfg.dot/cpp/ast-cfg-hybrid.dot=
+
+* Render via dot
+  The hybrid is rendered via dot.  The other renderers produced very spread
+  layouts. 
+  #+BEGIN_SRC sh 
+    # Convert dot to pdf
+    twopi -Tpdf < cfg.dot/cpp/ast-cfg-hybrid.dot > cfg.dot/cpp/ast-cfg-hybrid.pdf
+    circo -Tpdf < cfg.dot/cpp/ast-cfg-hybrid.dot > cfg.dot/cpp/ast-cfg-hybrid.pdf
+    dot -Tpdf < cfg.dot/cpp/ast-cfg-hybrid.dot > cfg.dot/cpp/ast-cfg-hybrid.pdf
+    dot -Tsvg < cfg.dot/cpp/ast-cfg-hybrid.dot > cfg.dot/cpp/ast-cfg-hybrid.svg
+
+    # View the graph
+    open -a skim cfg.dot/cpp/ast-cfg-hybrid.pdf
+  #+END_SRC
+
+* AST-CFG HYBRID
+  The ast-cfg hybrid is inlined here.  For better viewing, open the
+  pdf ([[./cfg.dot/cpp/ast-cfg-hybrid.pdf]]) separately.
+  #+ATTR_HTML: :width 100%
+  [[./cfg.dot/cpp/ast-cfg-hybrid.svg]]
+
+* CFG with numbered nodes
+  The CFG with node numbering is inlined here.  For better viewing, open the
+  pdf ([[./cfg.dot/cpp/cfg-annotated.pdf]]) separately.
+  #+ATTR_HTML: :width 100%
+  [[./cfg.dot/cpp/cfg-annotated.svg]]
+  
+  As before, this graph is rendered via dot:
+  #+BEGIN_SRC sh 
+    dot -Tpdf < cfg.dot/cpp/cfg-annotated.dot > cfg.dot/cpp/cfg-annotated.pdf
+    dot -Tsvg < cfg.dot/cpp/cfg-annotated.dot > cfg.dot/cpp/cfg-annotated.svg
+
+    # View the graph
+    open -a skim cfg.dot/cpp/cfg-annotated.pdf
+
+  #+END_SRC
+
+* Source Annotated with CFG Nodes
+  The CFG entries
+  #+BEGIN_SRC text
+    0[label="ExprStmt (0)"; ];
+    1[label="call to memcpy (1)"; ];
+    2[label="input (2)"; ];
+    3[label="0 (3)"; ];
+    4[label="access to array (4)"; ];
+    5[label="ptr (5)"; ];
+    6[label="buf (6)"; ];
+    7[label="input (7)"; ];
+    8[label="1 (8)"; ];
+    9[label="access to array (9)"; ];
+    10[label="ptr (10)"; ];
+    11[label="buf (11)"; ];
+  #+END_SRC
+  are located in the source code as follows
+  #+BEGIN_SRC c++
+    int    copy_mem(unsigned    int    unused,    dyn_input_t    *input,
+
+
+                    unsigned    int    input_types)    {
+                                                       0
+
+            memcpy(input[0].ptr.buf,    input[1].ptr.buf,
+            1      2     3              7     8
+                        4   5   6            9   10  11
+
+                   input[1].ptr.size);
+
+
+        copy_mem_nested(input);
+
+        ...;
+    }
+  #+END_SRC
+
+* DFG
+  The control flow graph and AST are narrowed to the function of interest,
+  #+BEGIN_SRC c++
+    int copy_mem(unsigned int unused, dyn_input_t *input,
+                 unsigned int input_types) {...}
+
+  #+END_SRC
+  from [[./tests-common/test_part1.c]], so we do the same for the DFG.
+
+  #+BEGIN_SRC sh 
+    # Produce ast in dot format
+    codeql database analyze                             \
+           --format=dot --output=ast.dot                \
+           -j8 -v --ram=16000                           \
+           --rerun                                      \
+           --                                           \
+           cpp-dataflow-part1-database                  \
+           graphs/dfg.ql                            
+
+    # Convert dot to pdf
+    dot -Tpdf < ast.dot/cpp/print-dfg.dot > ast.dot/cpp/print-dfg.pdf
+    dot -Tsvg < ast.dot/cpp/print-dfg.dot > ast.dot/cpp/print-dfg.svg
+
+    # View the graph
+    xdg-open ast.dot/cpp/print-dfg.pdf
+
+    # This comes from
+    tests-common/test_part1.c
+  #+END_SRC
+
+  
+  

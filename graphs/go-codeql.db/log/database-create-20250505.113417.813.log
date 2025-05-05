@@ -1,0 +1,663 @@
+[2025-05-05 11:34:17] This is codeql database create --language=go -s /Users/hohn/work-gh/mrva/mrvaserver -j 8 -v go-codeql.db --command=go build
+[2025-05-05 11:34:17] Log file was started late.
+[2025-05-05 11:34:17] [PROGRESS] database create> Initializing database at /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db.
+[2025-05-05 11:34:17] Running plumbing command: codeql database init --language=go --extractor-options-verbosity=1 --qlconfig-file=/Users/hohn/work-gh/mrva/mrvaserver/graphs/qlconfig.yml --source-root=/Users/hohn/work-gh/mrva/mrvaserver --allow-missing-source-root=false --allow-already-existing -- /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db
+[2025-05-05 11:34:17] Calling plumbing command: codeql resolve languages --extractor-options-verbosity=1 --format=betterjson
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/.codeqlmanifest.json
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/python/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/java/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/html/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/xml/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/properties/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/cpp/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/swift/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/csv/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/actions/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/yaml/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/csharp/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/javascript/codeql-extractor.yml.
+[2025-05-05 11:34:17] [DETAILS] resolve languages> Parsing /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/ruby/codeql-extractor.yml.
+[2025-05-05 11:34:18] Plumbing command codeql resolve languages completed:
+                      {
+                        "aliases" : {
+                          "c" : "cpp",
+                          "c++" : "cpp",
+                          "c-c++" : "cpp",
+                          "c-cpp" : "cpp",
+                          "c#" : "csharp",
+                          "java-kotlin" : "java",
+                          "kotlin" : "java",
+                          "javascript-typescript" : "javascript",
+                          "typescript" : "javascript"
+                        },
+                        "extractors" : {
+                          "go" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go",
+                              "extractor_options" : {
+                                "extract_tests" : {
+                                  "title" : "Whether to include Go test files in the CodeQL database.",
+                                  "description" : "A value indicating whether Go test files should be included in the CodeQL database. The default is 'false'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "extract_vendor_dirs" : {
+                                  "title" : "Whether to include Go vendor directories in the CodeQL database.",
+                                  "description" : "A value indicating whether Go vendor directories should be included in the CodeQL database. The default is 'false'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/python",
+                              "extractor_options" : {
+                                "logging" : {
+                                  "title" : "Options pertaining to logging.",
+                                  "description" : "Options pertaining to logging.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "verbosity" : {
+                                      "title" : "Python extractor logging verbosity level.",
+                                      "description" : "Controls the level of verbosity of the CodeQL Python extractor.\nThe supported levels are (in order of increasing verbosity):\n\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+                                      "type" : "string",
+                                      "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+                                    }
+                                  }
+                                },
+                                "python_executable_name" : {
+                                  "title" : "Controls the name of the Python executable used by the Python extractor.",
+                                  "description" : "The Python extractor uses platform-dependent heuristics to determine the name of the Python executable to use. Specifying a value for this option overrides the name of the Python executable used by the extractor. Accepted values are py, python and python3. Use this setting with caution, the Python extractor requires Python 3 to run.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(py|python|python3)$"
+                                }
+                              }
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis. This accepts glob patterns that are supported by Java's 'getPathMatcher' implementation.\n",
+                                  "type" : "string"
+                                },
+                                "add_prefer_source" : {
+                                  "title" : "Whether to always prefer source files over class files.",
+                                  "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction (experimental).",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "buildless_dependency_dir" : {
+                                  "title" : "The path where buildless (standalone) extraction should keep dependencies.",
+                                  "description" : "If set, the buildless (standalone) extractor will store dependencies in this directory.\n",
+                                  "type" : "string"
+                                },
+                                "minimize_dependency_jars" : {
+                                  "title" : "Whether to rewrite and minimize downloaded JAR dependencies (experimental).",
+                                  "description" : "If 'true', JAR dependencies downloaded during extraction will be rewritten to remove unneeded data, such as method bodies. The default is 'false'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/html"
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/xml"
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/properties"
+                            }
+                          ],
+                          "cpp" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/cpp",
+                              "extractor_options" : {
+                                "scale_timeouts" : {
+                                  "title" : "Value to scale compiler introspection timeouts with",
+                                  "description" : "The extractor attempts to determine what compiler the source code being extracted is compiled with. To this end the extractor makes additional calls to the compiler, some of which are expected to return within a certain fixed time (either 10s or 15s). On some systems that are under high load this time might be too short, and can be scaled up using this option.\n",
+                                  "type" : "string",
+                                  "pattern" : "[0-9]+"
+                                },
+                                "log_verbosity" : {
+                                  "title" : "Verbosity of the extractor logging",
+                                  "description" : "Set the verbosity of the extractor logging to 'quiet' (0), 'normal' (1), 'chatty' (2), or 'noisy' (3). The default is 'normal'.\n",
+                                  "type" : "string",
+                                  "pattern" : "[0-3]"
+                                }
+                              }
+                            }
+                          ],
+                          "swift" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/swift"
+                            }
+                          ],
+                          "csv" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/csv"
+                            }
+                          ],
+                          "actions" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/actions",
+                              "extractor_options" : { }
+                            }
+                          ],
+                          "yaml" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/yaml"
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/csharp",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip|brotli)$"
+                                    }
+                                  }
+                                },
+                                "buildless" : {
+                                  "title" : "DEPRECATED - Whether to use buildless (standalone) extraction.",
+                                  "description" : "DEPRECATED: Use `--build-mode none` instead.\nA value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "logging" : {
+                                  "title" : "Options pertaining to logging.",
+                                  "description" : "Options pertaining to logging.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "verbosity" : {
+                                      "title" : "Extractor logging verbosity level.",
+                                      "description" : "Controls the level of verbosity of the extractor. The supported levels are (in order of increasing verbosity):\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+                                      "type" : "string",
+                                      "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+                                    }
+                                  }
+                                },
+                                "binlog" : {
+                                  "title" : "Binlog",
+                                  "description" : "[EXPERIMENTAL] The value is a path to the MsBuild binary log file that should be extracted. This option only works when `--build-mode none` is also specified.\n",
+                                  "type" : "array"
+                                }
+                              }
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/javascript",
+                              "extractor_options" : {
+                                "skip_types" : {
+                                  "title" : "Skip type extraction for TypeScript",
+                                  "description" : "Whether to skip the extraction of types in a TypeScript application",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/ruby",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip)$"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+[2025-05-05 11:34:18] [PROGRESS] database init> Calculating baseline information in /Users/hohn/work-gh/mrva/mrvaserver
+[2025-05-05 11:34:18] [SPAMMY] database init> Ignoring the following directories when processing baseline information: .git, .hg, .svn.
+[2025-05-05 11:34:18] [DETAILS] database init> Running command in /Users/hohn/work-gh/mrva/mrvaserver: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/tools/osx64/scc --by-file --exclude-dir .git,.hg,.svn --format json --no-large --no-min .
+[2025-05-05 11:34:18] Using configure-baseline script /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/configure-baseline.sh.
+[2025-05-05 11:34:18] [PROGRESS] database init> Running command in /Users/hohn/work-gh/mrva/mrvaserver: [/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/configure-baseline.sh]
+[2025-05-05 11:34:18] [SPAMMY] database init> Found 1 baseline files for go.
+[2025-05-05 11:34:18] [PROGRESS] database init> Calculated baseline information for languages: go (35ms).
+[2025-05-05 11:34:21] [PROGRESS] database init> Resolving extractor go.
+[2025-05-05 11:34:21] [DETAILS] database init> Found candidate extractor root for go: /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go.
+[2025-05-05 11:34:21] [PROGRESS] database init> Successfully loaded extractor Go (go) from /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go.
+[2025-05-05 11:34:21] [SPAMMY] database init> Determining macOS System Integrity Protection status...
+[2025-05-05 11:34:21] [SPAMMY] database init> Running command [/usr/bin/csrutil, status].
+[2025-05-05 11:34:21] [SPAMMY] database init> SIP is enabled.
+[2025-05-05 11:34:21] [PROGRESS] database init> Created skeleton CodeQL database at /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db. This in-progress database is ready to be populated by an extractor.
+[2025-05-05 11:34:21] Plumbing command codeql database init completed.
+[2025-05-05 11:34:21] [PROGRESS] database create> Running build command: [go, build]
+[2025-05-05 11:34:21] Running plumbing command: codeql database trace-command --threads=8 --working-dir=/Users/hohn/work-gh/mrva/mrvaserver --index-traceless-dbs --no-db-cluster -- /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db go build
+[2025-05-05 11:34:21] [PROGRESS] database trace-command> Running command in /Users/hohn/work-gh/mrva/mrvaserver: [go, build]
+[2025-05-05 11:34:52] Plumbing command codeql database trace-command completed.
+[2025-05-05 11:34:52] [PROGRESS] database create> Finalizing database at /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db.
+[2025-05-05 11:34:52] Running plumbing command: codeql database finalize --threads=8 --no-db-cluster -- /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db
+[2025-05-05 11:34:52] Using pre-finalize script /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/pre-finalize.sh.
+[2025-05-05 11:34:52] [PROGRESS] database finalize> Running pre-finalize script /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/pre-finalize.sh in /Users/hohn/work-gh/mrva/mrvaserver.
+[2025-05-05 11:34:52] Running plumbing command: codeql database trace-command --working-dir=/Users/hohn/work-gh/mrva/mrvaserver --no-tracing --threads=8 -- /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db /Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/pre-finalize.sh
+[2025-05-05 11:34:52] [PROGRESS] database trace-command> Running command in /Users/hohn/work-gh/mrva/mrvaserver: [/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/tools/pre-finalize.sh]
+[2025-05-05 11:34:53] [build-stderr] Scanning for files in /Users/hohn/work-gh/mrva/mrvaserver...
+[2025-05-05 11:34:53] Plumbing command codeql database trace-command completed.
+[2025-05-05 11:34:53] [PROGRESS] database finalize> Running TRAP import for CodeQL database at /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db...
+[2025-05-05 11:34:53] Running plumbing command: codeql dataset import --dbscheme=/Users/hohn/.local/share/gh/extensions/gh-codeql/dist/release/v2.21.0/go/go.dbscheme --threads=8 -- /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/trap/go
+[2025-05-05 11:34:53] Clearing disk cache since the version file /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go/default/cache/version does not exist
+[2025-05-05 11:34:53] Tuple pool not found. Clearing relations with cached strings
+[2025-05-05 11:34:53] Trimming disk cache at /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go/default/cache in mode clear.
+[2025-05-05 11:34:53] Sequence stamp origin is -6052854059530903594
+[2025-05-05 11:34:53] Pausing evaluation to hard-clear memory at sequence stamp o+0
+[2025-05-05 11:34:53] Unpausing evaluation
+[2025-05-05 11:34:53] Pausing evaluation to quickly trim disk at sequence stamp o+1
+[2025-05-05 11:34:53] Unpausing evaluation
+[2025-05-05 11:34:53] Pausing evaluation to zealously trim disk at sequence stamp o+2
+[2025-05-05 11:34:53] Unpausing evaluation
+[2025-05-05 11:34:53] Trimming completed (3ms): Purged everything.
+[2025-05-05 11:34:53] Scanning for files in /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/trap/go
+[2025-05-05 11:34:53] Found 236 TRAP files (4.45 MiB)
+[2025-05-05 11:34:53] [PROGRESS] dataset import> Importing TRAP files
+[2025-05-05 11:34:53] Importing cmp.trap.gz (7 of 236)
+[2025-05-05 11:34:53] Importing go.mod.trap.gz (4 of 236)
+[2025-05-05 11:34:53] Importing tar.trap.gz (2 of 236)
+[2025-05-05 11:34:53] Importing bytes.trap.gz (6 of 236)
+[2025-05-05 11:34:53] Importing main.go.trap.gz (1 of 236)
+[2025-05-05 11:34:53] Importing ae4850bb108a15d4e387033ee49f71_0.trap.gz (8 of 236)
+[2025-05-05 11:34:53] Importing zip.trap.gz (3 of 236)
+[2025-05-05 11:34:53] Importing bufio.trap.gz (5 of 236)
+[2025-05-05 11:34:53] Importing flate.trap.gz (9 of 236)
+[2025-05-05 11:34:53] Importing gzip.trap.gz (10 of 236)
+[2025-05-05 11:34:53] Importing list.trap.gz (11 of 236)
+[2025-05-05 11:34:53] Importing context.trap.gz (12 of 236)
+[2025-05-05 11:34:53] Importing aes.trap.gz (13 of 236)
+[2025-05-05 11:34:53] Importing cipher.trap.gz (14 of 236)
+[2025-05-05 11:34:53] Importing des.trap.gz (15 of 236)
+[2025-05-05 11:34:53] Importing dsa.trap.gz (16 of 236)
+[2025-05-05 11:34:53] Importing ecdh.trap.gz (17 of 236)
+[2025-05-05 11:34:53] Importing ecdsa.trap.gz (18 of 236)
+[2025-05-05 11:34:53] Importing ed25519.trap.gz (19 of 236)
+[2025-05-05 11:34:53] Importing elliptic.trap.gz (20 of 236)
+[2025-05-05 11:34:53] Importing hmac.trap.gz (21 of 236)
+[2025-05-05 11:34:53] Importing alias.trap.gz (22 of 236)
+[2025-05-05 11:34:53] Importing bigmod.trap.gz (23 of 236)
+[2025-05-05 11:34:53] Importing bbig.trap.gz (24 of 236)
+[2025-05-05 11:34:53] Importing sig.trap.gz (25 of 236)
+[2025-05-05 11:34:53] Importing boring.trap.gz (26 of 236)
+[2025-05-05 11:34:53] Importing field.trap.gz (27 of 236)
+[2025-05-05 11:34:53] Importing edwards25519.trap.gz (28 of 236)
+[2025-05-05 11:34:53] Importing hpke.trap.gz (29 of 236)
+[2025-05-05 11:34:53] Importing mlkem768.trap.gz (30 of 236)
+[2025-05-05 11:34:53] Importing fiat.trap.gz (31 of 236)
+[2025-05-05 11:34:53] Importing nistec.trap.gz (32 of 236)
+[2025-05-05 11:34:53] Importing randutil.trap.gz (33 of 236)
+[2025-05-05 11:34:53] Importing md5.trap.gz (34 of 236)
+[2025-05-05 11:34:53] Importing rand.trap.gz (35 of 236)
+[2025-05-05 11:34:53] Importing rc4.trap.gz (36 of 236)
+[2025-05-05 11:34:53] Importing rsa.trap.gz (37 of 236)
+[2025-05-05 11:34:53] Importing sha1.trap.gz (38 of 236)
+[2025-05-05 11:34:53] Importing sha256.trap.gz (39 of 236)
+[2025-05-05 11:34:53] Importing sha512.trap.gz (40 of 236)
+[2025-05-05 11:34:53] Importing subtle.trap.gz (41 of 236)
+[2025-05-05 11:34:53] Importing tls.trap.gz (42 of 236)
+[2025-05-05 11:34:53] Importing macos.trap.gz (43 of 236)
+[2025-05-05 11:34:53] Importing pkix.trap.gz (44 of 236)
+[2025-05-05 11:34:53] Importing x509.trap.gz (45 of 236)
+[2025-05-05 11:34:53] Importing crypto.trap.gz (46 of 236)
+[2025-05-05 11:34:53] Importing driver.trap.gz (47 of 236)
+[2025-05-05 11:34:53] Importing embed.trap.gz (48 of 236)
+[2025-05-05 11:34:53] Importing asn1.trap.gz (49 of 236)
+[2025-05-05 11:34:53] Importing base64.trap.gz (50 of 236)
+[2025-05-05 11:34:53] Importing binary.trap.gz (51 of 236)
+[2025-05-05 11:34:53] Importing hex.trap.gz (52 of 236)
+[2025-05-05 11:34:53] Importing json.trap.gz (53 of 236)
+[2025-05-05 11:34:53] Importing pem.trap.gz (54 of 236)
+[2025-05-05 11:34:53] Importing xml.trap.gz (55 of 236)
+[2025-05-05 11:34:53] Importing encoding.trap.gz (56 of 236)
+[2025-05-05 11:34:53] Importing errors.trap.gz (57 of 236)
+[2025-05-05 11:34:53] Importing flag.trap.gz (58 of 236)
+[2025-05-05 11:34:53] Importing fmt.trap.gz (59 of 236)
+[2025-05-05 11:34:53] Importing internal.trap.gz (60 of 236)
+[2025-05-05 11:34:53] Importing toml.trap.gz (61 of 236)
+[2025-05-05 11:34:53] Importing registry.trap.gz (62 of 236)
+[2025-05-05 11:34:53] Importing aix.trap.gz (63 of 236)
+[2025-05-05 11:34:53] Importing darwin.trap.gz (64 of 236)
+[2025-05-05 11:34:53] Importing linux.trap.gz (65 of 236)
+[2025-05-05 11:34:53] Importing shared.trap.gz (66 of 236)
+[2025-05-05 11:34:53] Importing windows.trap.gz (67 of 236)
+[2025-05-05 11:34:53] Importing types.trap.gz (68 of 236)
+[2025-05-05 11:34:53] Importing go-sysinfo.trap.gz (69 of 236)
+[2025-05-05 11:34:53] Importing decoder.trap.gz (70 of 236)
+[2025-05-05 11:34:53] Importing vm.trap.gz (71 of 236)
+[2025-05-05 11:34:53] Importing vm_color.trap.gz (72 of 236)
+[2025-05-05 11:34:53] Importing vm_color_indent.trap.gz (73 of 236)
+[2025-05-05 11:34:53] Importing vm_indent.trap.gz (74 of 236)
+[2025-05-05 11:34:53] Importing encoder.trap.gz (75 of 236)
+[2025-05-05 11:34:53] Importing errors.trap.gz (76 of 236)
+[2025-05-05 11:34:53] Importing runtime.trap.gz (77 of 236)
+[2025-05-05 11:34:53] Importing go-json.trap.gz (78 of 236)
+[2025-05-05 11:34:53] Importing uuid.trap.gz (79 of 236)
+[2025-05-05 11:34:53] Importing mux.trap.gz (80 of 236)
+[2025-05-05 11:34:53] Importing mcc.trap.gz (81 of 236)
+[2025-05-05 11:34:53] Importing agent.trap.gz (82 of 236)
+[2025-05-05 11:34:53] Importing artifactstore.trap.gz (83 of 236)
+[2025-05-05 11:34:53] Importing codeql.trap.gz (84 of 236)
+[2025-05-05 11:34:53] Importing common.trap.gz (85 of 236)
+[2025-05-05 11:34:53] Importing deploy.trap.gz (86 of 236)
+[2025-05-05 11:34:53] Importing qldbstore.trap.gz (87 of 236)
+[2025-05-05 11:34:53] Importing queue.trap.gz (88 of 236)
+[2025-05-05 11:34:53] Importing server.trap.gz (89 of 236)
+[2025-05-05 11:34:53] Importing state.trap.gz (90 of 236)
+[2025-05-05 11:34:53] Importing utils.trap.gz (91 of 236)
+[2025-05-05 11:34:53] Importing race.trap.gz (92 of 236)
+[2025-05-05 11:34:53] Importing s2.trap.gz (93 of 236)
+[2025-05-05 11:34:53] Importing md5-simd.trap.gz (94 of 236)
+[2025-05-05 11:34:53] Importing credentials.trap.gz (95 of 236)
+[2025-05-05 11:34:53] Importing encrypt.trap.gz (96 of 236)
+[2025-05-05 11:34:53] Importing lifecycle.trap.gz (97 of 236)
+[2025-05-05 11:34:53] Importing notification.trap.gz (98 of 236)
+[2025-05-05 11:34:53] Importing replication.trap.gz (99 of 236)
+[2025-05-05 11:34:53] Importing s3utils.trap.gz (100 of 236)
+[2025-05-05 11:34:53] Importing set.trap.gz (101 of 236)
+[2025-05-05 11:34:53] Importing signer.trap.gz (102 of 236)
+[2025-05-05 11:34:53] Importing sse.trap.gz (103 of 236)
+[2025-05-05 11:34:53] Importing tags.trap.gz (104 of 236)
+[2025-05-05 11:34:53] Importing v7.trap.gz (105 of 236)
+[2025-05-05 11:34:53] Importing xid.trap.gz (107 of 236)
+[2025-05-05 11:34:53] Importing amqp091-go.trap.gz (106 of 236)
+[2025-05-05 11:34:53] Importing argon2.trap.gz (108 of 236)
+[2025-05-05 11:34:53] Importing blake2b.trap.gz (109 of 236)
+[2025-05-05 11:34:53] Importing constraints.trap.gz (110 of 236)
+[2025-05-05 11:34:53] Importing slices.trap.gz (111 of 236)
+[2025-05-05 11:34:53] Importing buffer.trap.gz (112 of 236)
+[2025-05-05 11:34:53] Importing internal.trap.gz (113 of 236)
+[2025-05-05 11:34:53] Importing slog.trap.gz (114 of 236)
+[2025-05-05 11:34:53] Importing httpguts.trap.gz (115 of 236)
+[2025-05-05 11:34:53] Importing idna.trap.gz (116 of 236)
+[2025-05-05 11:34:53] Importing publicsuffix.trap.gz (117 of 236)
+[2025-05-05 11:34:53] Importing unix.trap.gz (118 of 236)
+[2025-05-05 11:34:53] Importing bidirule.trap.gz (119 of 236)
+[2025-05-05 11:34:53] Importing transform.trap.gz (120 of 236)
+[2025-05-05 11:34:53] Importing bidi.trap.gz (121 of 236)
+[2025-05-05 11:34:53] Importing norm.trap.gz (122 of 236)
+[2025-05-05 11:34:53] Importing ini.v1.trap.gz (123 of 236)
+[2025-05-05 11:34:53] Importing yaml.v3.trap.gz (124 of 236)
+[2025-05-05 11:34:53] Importing crc32.trap.gz (125 of 236)
+[2025-05-05 11:34:53] Importing hash.trap.gz (126 of 236)
+[2025-05-05 11:34:53] Importing plist.trap.gz (127 of 236)
+[2025-05-05 11:34:53] Importing abi.trap.gz (128 of 236)
+[2025-05-05 11:34:53] Importing asan.trap.gz (129 of 236)
+[2025-05-05 11:34:53] Importing bisect.trap.gz (130 of 236)
+[2025-05-05 11:34:53] Importing bytealg.trap.gz (131 of 236)
+[2025-05-05 11:34:53] Importing byteorder.trap.gz (132 of 236)
+[2025-05-05 11:34:53] Importing chacha8rand.trap.gz (133 of 236)
+[2025-05-05 11:34:53] Importing concurrent.trap.gz (134 of 236)
+[2025-05-05 11:34:53] Importing rtcov.trap.gz (135 of 236)
+[2025-05-05 11:34:53] Importing cpu.trap.gz (136 of 236)
+[2025-05-05 11:34:53] Importing filepathlite.trap.gz (137 of 236)
+[2025-05-05 11:34:53] Importing fmtsort.trap.gz (138 of 236)
+[2025-05-05 11:34:53] Importing goarch.trap.gz (139 of 236)
+[2025-05-05 11:34:53] Importing godebug.trap.gz (140 of 236)
+[2025-05-05 11:34:53] Importing godebugs.trap.gz (141 of 236)
+[2025-05-05 11:34:53] Importing goexperiment.trap.gz (142 of 236)
+[2025-05-05 11:34:53] Importing goos.trap.gz (143 of 236)
+[2025-05-05 11:34:53] Importing itoa.trap.gz (144 of 236)
+[2025-05-05 11:34:53] Importing msan.trap.gz (145 of 236)
+[2025-05-05 11:34:53] Importing nettrace.trap.gz (146 of 236)
+[2025-05-05 11:34:53] Importing oserror.trap.gz (147 of 236)
+[2025-05-05 11:34:53] Importing poll.trap.gz (148 of 236)
+[2025-05-05 11:34:53] Importing profilerecord.trap.gz (149 of 236)
+[2025-05-05 11:34:53] Importing race.trap.gz (150 of 236)
+[2025-05-05 11:34:53] Importing reflectlite.trap.gz (151 of 236)
+[2025-05-05 11:34:53] Importing atomic.trap.gz (152 of 236)
+[2025-05-05 11:34:53] Importing exithook.trap.gz (153 of 236)
+[2025-05-05 11:34:53] Importing singleflight.trap.gz (154 of 236)
+[2025-05-05 11:34:53] Importing stringslite.trap.gz (155 of 236)
+[2025-05-05 11:34:53] Importing execenv.trap.gz (156 of 236)
+[2025-05-05 11:34:53] Importing unix.trap.gz (157 of 236)
+[2025-05-05 11:34:53] Importing testlog.trap.gz (158 of 236)
+[2025-05-05 11:34:53] Importing unsafeheader.trap.gz (159 of 236)
+[2025-05-05 11:34:53] Importing weak.trap.gz (160 of 236)
+[2025-05-05 11:34:53] Importing fs.trap.gz (161 of 236)
+[2025-05-05 11:34:53] Importing ioutil.trap.gz (162 of 236)
+[2025-05-05 11:34:53] Importing io.trap.gz (163 of 236)
+[2025-05-05 11:34:53] Importing iter.trap.gz (164 of 236)
+[2025-05-05 11:34:53] Importing internal.trap.gz (165 of 236)
+[2025-05-05 11:34:53] Importing buffer.trap.gz (166 of 236)
+[2025-05-05 11:34:53] Importing internal.trap.gz (167 of 236)
+[2025-05-05 11:34:53] Importing slog.trap.gz (168 of 236)
+[2025-05-05 11:34:53] Importing log.trap.gz (169 of 236)
+[2025-05-05 11:34:53] Importing maps.trap.gz (170 of 236)
+[2025-05-05 11:34:53] Importing big.trap.gz (171 of 236)
+[2025-05-05 11:34:53] Importing bits.trap.gz (172 of 236)
+[2025-05-05 11:34:53] Importing v2.trap.gz (173 of 236)
+[2025-05-05 11:34:53] Importing rand.trap.gz (174 of 236)
+[2025-05-05 11:34:53] Importing math.trap.gz (175 of 236)
+[2025-05-05 11:34:53] Importing metadata.trap.gz (176 of 236)
+[2025-05-05 11:34:53] Importing multipart.trap.gz (177 of 236)
+[2025-05-05 11:34:53] Importing quotedprintable.trap.gz (178 of 236)
+[2025-05-05 11:34:53] Importing mime.trap.gz (179 of 236)
+[2025-05-05 11:34:53] Importing mrvaserver.trap.gz (180 of 236)
+[2025-05-05 11:34:53] Importing cookiejar.trap.gz (181 of 236)
+[2025-05-05 11:34:53] Importing httptrace.trap.gz (182 of 236)
+[2025-05-05 11:34:53] Importing httputil.trap.gz (183 of 236)
+[2025-05-05 11:34:53] Importing ascii.trap.gz (184 of 236)
+[2025-05-05 11:34:53] Importing internal.trap.gz (185 of 236)
+[2025-05-05 11:34:53] Importing http.trap.gz (186 of 236)
+[2025-05-05 11:34:53] Importing netip.trap.gz (187 of 236)
+[2025-05-05 11:34:53] Importing textproto.trap.gz (188 of 236)
+[2025-05-05 11:34:53] Importing url.trap.gz (189 of 236)
+[2025-05-05 11:34:53] Importing net.trap.gz (190 of 236)
+[2025-05-05 11:34:53] Importing exec.trap.gz (191 of 236)
+[2025-05-05 11:34:53] Importing signal.trap.gz (192 of 236)
+[2025-05-05 11:34:53] Importing user.trap.gz (193 of 236)
+[2025-05-05 11:34:53] Importing os.trap.gz (194 of 236)
+[2025-05-05 11:34:53] Importing filepath.trap.gz (195 of 236)
+[2025-05-05 11:34:53] Importing path.trap.gz (196 of 236)
+[2025-05-05 11:34:53] Importing reflect.trap.gz (197 of 236)
+[2025-05-05 11:34:53] Importing syntax.trap.gz (198 of 236)
+[2025-05-05 11:34:53] Importing regexp.trap.gz (199 of 236)
+[2025-05-05 11:34:53] Importing cgo.trap.gz (200 of 236)
+[2025-05-05 11:34:53] Importing math.trap.gz (201 of 236)
+[2025-05-05 11:34:53] Importing sys.trap.gz (202 of 236)
+[2025-05-05 11:34:53] Importing runtime.trap.gz (203 of 236)
+[2025-05-05 11:34:53] Importing slices.trap.gz (204 of 236)
+[2025-05-05 11:34:53] Importing sort.trap.gz (205 of 236)
+[2025-05-05 11:34:53] Importing strconv.trap.gz (206 of 236)
+[2025-05-05 11:34:53] Importing strings.trap.gz (207 of 236)
+[2025-05-05 11:34:53] Importing atomic.trap.gz (208 of 236)
+[2025-05-05 11:34:53] Importing sync.trap.gz (209 of 236)
+[2025-05-05 11:34:53] Importing syscall.trap.gz (210 of 236)
+[2025-05-05 11:34:53] Importing time.trap.gz (211 of 236)
+[2025-05-05 11:34:53] Importing utf16.trap.gz (212 of 236)
+[2025-05-05 11:34:53] Importing utf8.trap.gz (213 of 236)
+[2025-05-05 11:34:53] Importing unicode.trap.gz (214 of 236)
+[2025-05-05 11:34:53] Importing unique.trap.gz (215 of 236)
+[2025-05-05 11:34:53] Importing universe.trap.gz (216 of 236)
+[2025-05-05 11:34:53] Importing unsafe.trap.gz (217 of 236)
+[2025-05-05 11:34:53] Importing chacha20.trap.gz (218 of 236)
+[2025-05-05 11:34:53] Importing chacha20poly1305.trap.gz (219 of 236)
+[2025-05-05 11:34:53] Importing asn1.trap.gz (220 of 236)
+[2025-05-05 11:34:53] Importing cryptobyte.trap.gz (221 of 236)
+[2025-05-05 11:34:53] Importing hkdf.trap.gz (222 of 236)
+[2025-05-05 11:34:53] Importing alias.trap.gz (223 of 236)
+[2025-05-05 11:34:53] Importing poly1305.trap.gz (224 of 236)
+[2025-05-05 11:34:53] Importing sha3.trap.gz (225 of 236)
+[2025-05-05 11:34:53] Importing dnsmessage.trap.gz (226 of 236)
+[2025-05-05 11:34:53] Importing httpguts.trap.gz (227 of 236)
+[2025-05-05 11:34:53] Importing httpproxy.trap.gz (228 of 236)
+[2025-05-05 11:34:53] Importing hpack.trap.gz (229 of 236)
+[2025-05-05 11:34:53] Importing idna.trap.gz (230 of 236)
+[2025-05-05 11:34:53] Importing route.trap.gz (231 of 236)
+[2025-05-05 11:34:53] Importing cpu.trap.gz (232 of 236)
+[2025-05-05 11:34:53] Importing bidirule.trap.gz (233 of 236)
+[2025-05-05 11:34:53] Importing transform.trap.gz (234 of 236)
+[2025-05-05 11:34:53] Importing bidi.trap.gz (235 of 236)
+[2025-05-05 11:34:53] Importing norm.trap.gz (236 of 236)
+[2025-05-05 11:34:53] [PROGRESS] dataset import> Merging relations
+[2025-05-05 11:34:54] Merging 8 fragments for 'methodreceivers'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'component_types'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'types'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'typename'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'objects'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'scopenesting'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'scopes'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'objectscopes'.
+[2025-05-05 11:34:54] Merged 426 bytes for 'scopes'.
+[2025-05-05 11:34:54] Merged 450 bytes for 'scopenesting'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'underlying_type'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'type_objects'.
+[2025-05-05 11:34:54] Merged 8396 bytes (8.20 KiB) for 'typename'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'methodhosts'.
+[2025-05-05 11:34:54] Merged 17467 bytes (17.06 KiB) for 'methodreceivers'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'element_type'.
+[2025-05-05 11:34:54] Merged 47895 bytes (46.77 KiB) for 'objectscopes'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'base_type'.
+[2025-05-05 11:34:54] Merged 31027 bytes (30.30 KiB) for 'types'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'fieldstructs'.
+[2025-05-05 11:34:54] Merged 8713 bytes (8.51 KiB) for 'underlying_type'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'objecttypes'.
+[2025-05-05 11:34:54] Merged 8066 bytes (7.88 KiB) for 'type_objects'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'packages'.
+[2025-05-05 11:34:54] Merged 1799 bytes (1.76 KiB) for 'methodhosts'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'array_length'.
+[2025-05-05 11:34:54] Merged 140642 bytes (137.35 KiB) for 'component_types'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'typeparam'.
+[2025-05-05 11:34:54] Merged 3335 bytes (3.26 KiB) for 'element_type'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'struct_tags'.
+[2025-05-05 11:34:54] Merged 184697 bytes (180.37 KiB) for 'objects'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'key_type'.
+[2025-05-05 11:34:54] Merged 6480 bytes (6.33 KiB) for 'base_type'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'interface_private_method_ids'.
+[2025-05-05 11:34:54] Merged 16116 bytes (15.74 KiB) for 'fieldstructs'.
+[2025-05-05 11:34:54] Merging 8 fragments for 'variadic'.
+[2025-05-05 11:34:54] Merged 1818 bytes (1.78 KiB) for 'packages'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'compilations'.
+[2025-05-05 11:34:54] Merged 27 bytes for 'compilations'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'compilation_args'.
+[2025-05-05 11:34:54] Merged 1135 bytes (1.11 KiB) for 'array_length'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'compilation_compiling_files'.
+[2025-05-05 11:34:54] Merged 41 bytes for 'compilation_args'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'compilation_finished'.
+[2025-05-05 11:34:54] Merged 67 bytes for 'compilation_finished'.
+[2025-05-05 11:34:54] Merged 39 bytes for 'compilation_compiling_files'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'sourceLocationPrefix'.
+[2025-05-05 11:34:54] Merging 2 fragments for 'folders'.
+[2025-05-05 11:34:54] Merged 17 bytes for 'sourceLocationPrefix'.
+[2025-05-05 11:34:54] Merging 2 fragments for 'containerparent'.
+[2025-05-05 11:34:54] Merged 159126 bytes (155.40 KiB) for 'objecttypes'.
+[2025-05-05 11:34:54] Merging 2 fragments for 'files'.
+[2025-05-05 11:34:54] Merged 36 bytes for 'folders'.
+[2025-05-05 11:34:54] Merging 2 fragments for 'locations_default'.
+[2025-05-05 11:34:54] Merged 2573 bytes (2.51 KiB) for 'typeparam'.
+[2025-05-05 11:34:54] Merging 2 fragments for 'has_location'.
+[2025-05-05 11:34:54] Merged 534 bytes for 'key_type'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'literals'.
+[2025-05-05 11:34:54] Merged 2431 bytes (2.37 KiB) for 'struct_tags'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'exprs'.
+[2025-05-05 11:34:54] Merged 39 bytes for 'containerparent'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'specs'.
+[2025-05-05 11:34:54] Merged 28 bytes for 'files'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'decls'.
+[2025-05-05 11:34:54] Merged 2940 bytes (2.87 KiB) for 'locations_default'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'type_of'.
+[2025-05-05 11:34:54] Merged 1398 bytes (1.37 KiB) for 'literals'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'defs'.
+[2025-05-05 11:34:54] Merged 1668 bytes (1.63 KiB) for 'has_location'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'scopenodes'.
+[2025-05-05 11:34:54] Merged 2171 bytes (2.12 KiB) for 'exprs'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'uses'.
+[2025-05-05 11:34:54] Merged 300 bytes for 'interface_private_method_ids'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'constvalues'.
+[2025-05-05 11:34:54] Merged 93 bytes for 'specs'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'stmts'.
+[2025-05-05 11:34:54] Merged 62 bytes for 'decls'.
+[2025-05-05 11:34:54] Merging 2 fragments for 'comment_groups'.
+[2025-05-05 11:34:54] Merged 85 bytes for 'scopenodes'.
+[2025-05-05 11:34:54] Merged 77 bytes for 'defs'.
+[2025-05-05 11:34:54] Merging 2 fragments for 'comments'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'numlines'.
+[2025-05-05 11:34:54] Merged 1317 bytes (1.29 KiB) for 'type_of'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'modtokens'.
+[2025-05-05 11:34:54] Merged 626 bytes for 'uses'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'modexprs'.
+[2025-05-05 11:34:54] Merged 317 bytes for 'constvalues'.
+[2025-05-05 11:34:54] Merging 1 fragment for 'doc_comments'.
+[2025-05-05 11:34:54] Merged 237 bytes for 'variadic'.
+[2025-05-05 11:34:54] Merged 400 bytes for 'stmts'.
+[2025-05-05 11:34:54] Merged 46 bytes for 'numlines'.
+[2025-05-05 11:34:54] Merged 243 bytes for 'modtokens'.
+[2025-05-05 11:34:54] Merged 128 bytes for 'modexprs'.
+[2025-05-05 11:34:54] Merged 77 bytes for 'doc_comments'.
+[2025-05-05 11:34:54] Merged 118 bytes for 'comment_groups'.
+[2025-05-05 11:34:54] Merged 187 bytes for 'comments'.
+[2025-05-05 11:34:54] Saving string and id pools to disk.
+[2025-05-05 11:34:54] Finished importing TRAP files.
+[2025-05-05 11:34:54] Read 26.67 MiB of uncompressed TRAP data.
+[2025-05-05 11:34:54] Uncompressed relation data size: 1.99 MiB
+[2025-05-05 11:34:54] Relation data size: 640.54 KiB (merge rate: 809.68 KiB/s)
+[2025-05-05 11:34:54] String pool size: 2.78 MiB
+[2025-05-05 11:34:54] ID pool size: 4.50 MiB
+[2025-05-05 11:34:54] [PROGRESS] dataset import> Finished writing database (relations: 640.54 KiB; string pool: 2.78 MiB).
+[2025-05-05 11:34:54] Pausing evaluation to close the cache at sequence stamp o+421
+[2025-05-05 11:34:54] The disk cache is freshly trimmed; leave it be.
+[2025-05-05 11:34:54] Unpausing evaluation
+[2025-05-05 11:34:54] Plumbing command codeql dataset import completed.
+[2025-05-05 11:34:54] [PROGRESS] database finalize> TRAP import complete (1s).
+[2025-05-05 11:34:54] Running plumbing command: codeql database cleanup -- /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db
+[2025-05-05 11:34:54] [PROGRESS] database cleanup> Cleaning up existing TRAP files after import...
+[2025-05-05 11:34:54] [PROGRESS] database cleanup> TRAP files cleaned up (47ms).
+[2025-05-05 11:34:54] [PROGRESS] database cleanup> Cleaning up scratch directory...
+[2025-05-05 11:34:54] [PROGRESS] database cleanup> Scratch directory cleaned up (63ms).
+[2025-05-05 11:34:54] Running plumbing command: codeql dataset cleanup -- /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go
+[2025-05-05 11:34:54] [PROGRESS] dataset cleanup> Cleaning up dataset in /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go.
+[2025-05-05 11:34:54] Trimming disk cache at /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go/default/cache in mode trim.
+[2025-05-05 11:34:54] Sequence stamp origin is -6052854054993781747
+[2025-05-05 11:34:54] Pausing evaluation to quickly trim memory at sequence stamp o+0
+[2025-05-05 11:34:54] Unpausing evaluation
+[2025-05-05 11:34:54] Pausing evaluation to zealously trim disk at sequence stamp o+1
+[2025-05-05 11:34:54] Unpausing evaluation
+[2025-05-05 11:34:54] Trimming completed (2ms): Trimmed disposable data from cache.
+[2025-05-05 11:34:54] Pausing evaluation to close the cache at sequence stamp o+2
+[2025-05-05 11:34:54] The disk cache is freshly trimmed; leave it be.
+[2025-05-05 11:34:54] Unpausing evaluation
+[2025-05-05 11:34:54] [PROGRESS] dataset cleanup> Trimmed disposable data from cache.
+[2025-05-05 11:34:54] [PROGRESS] dataset cleanup> Finalizing dataset in /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go
+[2025-05-05 11:34:54] [DETAILS] dataset cleanup> Finished deleting ID pool from /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db/db-go (1ms).
+[2025-05-05 11:34:54] Plumbing command codeql dataset cleanup completed.
+[2025-05-05 11:34:54] Plumbing command codeql database cleanup completed with status 0.
+[2025-05-05 11:34:54] [PROGRESS] database finalize> Finished zipping source archive (2.40 KiB).
+[2025-05-05 11:34:54] Plumbing command codeql database finalize completed.
+[2025-05-05 11:34:54] [PROGRESS] database create> Successfully created database at /Users/hohn/work-gh/mrva/mrvaserver/graphs/go-codeql.db.
+[2025-05-05 11:34:54] Terminating normally.
