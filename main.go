@@ -12,8 +12,6 @@ import (
 	"path/filepath"
 	"syscall"
 
-	"github.com/hohn/mrvacommander/config/mcc"
-
 	"github.com/hohn/mrvacommander/pkg/deploy"
 	"github.com/hohn/mrvacommander/pkg/server"
 	"github.com/hohn/mrvacommander/pkg/state"
@@ -72,8 +70,8 @@ func main() {
 		slog.Info("Using default database root path", "dbPathRoot", *dbPathRoot)
 	}
 
-	// Read configuration
-	config := mcc.LoadConfig("mcconfig.toml")
+	// // Read configuration
+	// config := mcc.LoadConfig("mcconfig.toml")
 
 	// Output configuration summary
 	log.Printf("Help: %t\n", *helpFlag)
@@ -106,22 +104,22 @@ func main() {
 			os.Exit(1)
 		}
 
-		// XX: deprecate
-		// databases, err := deploy.InitMinIOCodeQLDatabaseStore()
-		// if err != nil {
-		// 	slog.Error("Failed to initialize database store", slog.Any("error", err))
-		// 	os.Exit(1)
-		// }
-
 		databases, err := deploy.InitHEPCDatabaseStore()
 		if err != nil {
 			slog.Error("Failed to initialize database store", slog.Any("error", err))
 			os.Exit(1)
 		}
 
+		// server.NewCommanderSingle(&server.Visibles{
+		// 	Queue:         rabbitMQQueue,
+		// 	State:         state.NewLocalState(config.Storage.StartingID),
+		// 	Artifacts:     artifacts,
+		// 	CodeQLDBStore: databases,
+		// })
+
 		server.NewCommanderSingle(&server.Visibles{
 			Queue:         rabbitMQQueue,
-			State:         state.NewLocalState(config.Storage.StartingID),
+			State:         state.NewPGState(),
 			Artifacts:     artifacts,
 			CodeQLDBStore: databases,
 		})
