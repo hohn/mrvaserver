@@ -4,23 +4,17 @@
 package main
 
 import (
-	"context"
 	"flag"
 	"log"
 	"log/slog"
 	"os"
 	"os/signal"
 	"path/filepath"
-	"sync"
 	"syscall"
 
 	"github.com/hohn/mrvacommander/config/mcc"
 
-	"github.com/hohn/mrvacommander/pkg/agent"
-	"github.com/hohn/mrvacommander/pkg/artifactstore"
 	"github.com/hohn/mrvacommander/pkg/deploy"
-	"github.com/hohn/mrvacommander/pkg/qldbstore"
-	"github.com/hohn/mrvacommander/pkg/queue"
 	"github.com/hohn/mrvacommander/pkg/server"
 	"github.com/hohn/mrvacommander/pkg/state"
 )
@@ -28,8 +22,8 @@ import (
 func main() {
 	// Define flags
 	helpFlag := flag.Bool("help", false, "Display help message")
-	logLevel := flag.String("loglevel", "info", "Set log level: debug, info, warn, error")
-	mode := flag.String("mode", "standalone", "Set mode: standalone, container, cluster")
+	logLevel := flag.String("loglevel", "debug", "Set log level: debug, info, warn, error")
+	mode := flag.String("mode", "container", "Set mode: standalone, container, cluster")
 	dbPathRoot := flag.String("dbpath", "", "Set the root path for the database store if using standalone mode.")
 
 	// Custom usage function for the help flag
@@ -93,30 +87,8 @@ func main() {
 	// Apply 'mode' flag
 	switch *mode {
 	case "standalone":
-		// Assemble single-process version
-		sq := queue.NewQueueSingle(2)
-		ss := state.NewLocalState(config.Storage.StartingID)
-		as := artifactstore.NewInMemoryArtifactStore()
-		ql := qldbstore.NewLocalFilesystemCodeQLDatabaseStore(*dbPathRoot)
-
-		server.NewCommanderSingle(&server.Visibles{
-			Queue:         sq,
-			State:         ss,
-			Artifacts:     as,
-			CodeQLDBStore: ql,
-		})
-
-		var wg sync.WaitGroup
-		ctx, cancel := context.WithCancel(context.Background())
-
-		go agent.StartAndMonitorWorkers(ctx, as, ql, sq, 2, &wg)
-
-		slog.Info("Started server and standalone agent")
-		<-sigChan
-		slog.Info("Shutting down...")
-		cancel()
-		wg.Wait()
-		slog.Info("Agent shutdown complete")
+		slog.Error("--mode standalone is deprecated. Allowed values are: container, cluster")
+		os.Exit(1)
 
 	case "container":
 		isAgent := false
