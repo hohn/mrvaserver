@@ -28,4 +28,4 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 )
 
-replace github.com/hohn/mrvacommander => /Users/hohn/work-gh/mrva/mrvacommander
+replace github.com/hohn/mrvacommander => /home/hohn/work-gh/mrva/mrvacommander

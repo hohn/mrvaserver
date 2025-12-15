@@ -8,6 +8,9 @@
         },
         {
             "path": "../mrvaagent"
+        },
+        {
+            "path": "../gh-mrva"
         }
     ],
     "settings": {
